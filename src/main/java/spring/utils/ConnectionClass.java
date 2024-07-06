@@ -10,7 +10,7 @@ public class ConnectionClass {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/student_registration_db", "root",
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory_management_system", "root",
 					"kyaw");
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.getMessage());
