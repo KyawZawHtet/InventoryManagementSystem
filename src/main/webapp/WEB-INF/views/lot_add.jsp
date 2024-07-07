@@ -21,23 +21,23 @@
             href="<c:url value="/resources/assets/img/inventory.png"/> "
     />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.min.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.min.css"/> " />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/animate.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap-datetimepicker.min.css"/> " />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/select2/css/select2.min.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/animate.css"/> " />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap-datetimepicker.min.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/select2/css/select2.min.css"/> " />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/dataTables.bootstrap4.min.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/dataTables.bootstrap4.min.css"/> " />
 
     <link
             rel="stylesheet"
             href="<c:url value="/resources/assets/plugins/fontawesome/css/fontawesome.min.css"/> "
     />
-    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/fontawesome/css/all.min.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/fontawesome/css/all.min.css"/> " />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/style.css"/> "/>
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/style.css"/> " />
 
 </head>
 <body>
@@ -130,7 +130,7 @@
                     <div class="noti-content">
                         <ul class="notification-list">
                             <li class="notification-message">
-                                <a href="<c:url value="#"/> ">
+                                <a href="<c:url value="#"/>">
                                     <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
                           <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-02.jpg"/> " />
@@ -321,9 +321,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add User </a></li>
-                            <li>
-                                <a href="<c:url value="#"/> " class="active">User List</a>
-                            </li>
+                            <li><a href="<c:url value="#"/> ">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -358,7 +356,9 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Category</a></li>
+                            <li>
+                                <a href="<c:url value="#"/> ">Add Category</a>
+                            </li>
                             <li><a href="<c:url value="#"/> ">Category List</a></li>
                         </ul>
                     </li>
@@ -385,7 +385,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
+                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -396,8 +396,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Lot </a></li>
-                            <li><a href="<c:url value="#"/>">Lot List</a></li>
+                            <li><a href="<c:url value="#"/> " class="active">Add Lot </a></li>
+                            <li><a href="<c:url value="#"/> ">Lot List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -447,163 +447,96 @@
         <div class="content">
             <div class="page-header">
                 <div class="page-title">
-                    <h4>User List</h4>
-                    <h6>Manage your User</h6>
-                </div>
-                <div class="page-btn">
-                    <a href="<c:url value="#"/> " class="btn btn-added"
-                    ><img src="<c:url value="/resources/assets/img/icons/plus.svg"/> " alt="img" />Add User</a
-                    >
+                    <h4>Add Lot</h4>
+                    <h6>Create new Lot</h6>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-body">
-                    <div class="table-top">
-                        <div class="search-set">
-                            <div class="search-path">
-                                <a class="btn btn-filter" id="filter_search">
-                                    <img src="<c:url value="/resources/assets/img/icons/filter.svg"/> " alt="img" />
-                                    <span
-                                    ><img src="<c:url value="/resources/assets/img/icons/closes.svg"/> " alt="img"
-                                    /></span>
-                                </a>
-                            </div>
-                            <div class="search-input">
-                                <a class="btn btn-searchset"
-                                ><img src="<c:url value="/resources/assets/img/icons/search-white.svg"/> " alt="img"
-                                /></a>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Lot Number</label>
+                                <input type="text" />
                             </div>
                         </div>
-                        <div class="wordset">
-                            <ul>
-                                <li>
-                                    <a
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="pdf"
-                                    ><img src="<c:url value="/resources/assets/img/icons/pdf.svg"/> " alt="img"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="excel"
-                                    ><img src="<c:url value="/resources/assets/img/icons/excel.svg"/> " alt="img"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="print"
-                                    ><img src="<c:url value="/resources/assets/img/icons/printer.svg"/> " alt="img"
-                                    /></a>
-                                </li>
-                            </ul>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="text" />
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="card" id="filter_inputs">
-                        <div class="card-body pb-0">
-                            <div class="row">
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter User Name" />
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Date</label>
+                                <div class="input-groupicon">
+                                    <input
+                                            type="text"
+                                            placeholder="DD-MM-YYYY"
+                                            class="datetimepicker"
+                                    />
+                                    <div class="addonset">
+                                        <img src="<c:url value="/resources/assets/img/icons/calendars.svg"/> " alt="img" />
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter Phone" />
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Expired Date</label>
+                                <div class="input-groupicon">
+                                    <input
+                                            type="text"
+                                            placeholder="DD-MM-YYYY"
+                                            class="datetimepicker"
+                                    />
+                                    <div class="addonset">
+                                        <img src="<c:url value="/resources/assets/img/icons/calendars.svg"/> " alt="img" />
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" placeholder="Enter Email" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input
-                                                type="text"
-                                                class="datetimepicker cal-icon"
-                                                placeholder="Choose Date"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Product</label>
+                                <div class="row">
+                                    <div class="col-lg-10 col-sm-10 col-10">
                                         <select class="select">
-                                            <option>Disable</option>
-                                            <option>Enable</option>
+                                            <option>Select Product</option>
+                                            <option>Product 1</option>
+                                            <option>Product 2</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-1 col-sm-6 col-12 ms-auto">
-                                    <div class="form-group">
-                                        <a class="btn btn-filters ms-auto"
-                                        ><img
-                                                src="<c:url value="/resources/assets/img/icons/search-whites.svg"/> "
-                                                alt="img"
-                                        /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label>Location</label>
+                                <div class="row">
+                                    <div class="col-lg-10 col-sm-10 col-10">
+                                        <select class="select">
+                                            <option>Select Location</option>
+                                            <option>Location 1</option>
+                                            <option>Location 2</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="table-responsive">
-                        <table class="table datanew">
-                            <thead>
-                            <tr>
-                                <th>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" />
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </th>
-                                <th>User name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Role</th>
-                                <th>Created On</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" />
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Thomas</td>
-                                <td>
-                                    <a
-                                            href="#"
-                                            class="__cf_email__"
-                                            data-cfemail="fb8f9394969a88bb9e839a968b979ed5989496"
-                                    >[email&#160;protected]</a
-                                    >
-                                </td>
-                                <td>09986532147</td>
-                                <td>Admin</td>
-                                <td>3/15/2022</td>
-                                <td><span class="bg-lightgreen badges">Active</span></td>
-                                <td>
-                                    <a class="me-3" href="<c:url value="#"/> ">
-                                        <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div class="col-lg-12">
+                            <a href="javascript:void(0);" class="btn btn-submit me-2"
+                            >Submit</a
+                            >
+                            <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
+                        </div>
                     </div>
                 </div>
             </div>

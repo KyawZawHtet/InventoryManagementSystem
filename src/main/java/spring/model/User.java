@@ -17,5 +17,5 @@ public class User {
 	private String password;
 	private String phoneNumber;
 	private boolean status;
-	private Role roleId;
+	private Long roleId;
 }

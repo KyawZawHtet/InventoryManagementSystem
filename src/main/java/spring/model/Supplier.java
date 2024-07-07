@@ -13,8 +13,8 @@ public class Supplier {
 
 	private Long id;
 	private String name;
+	private String contactName;
 	private String email;
 	private String phoneNumber;
-	private String addres;
-	private User userId;
+	private String address;
 }

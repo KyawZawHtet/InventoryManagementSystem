@@ -14,6 +14,6 @@ public class OrderDetail {
 	private Long id;
 	private int quantity;
 	private double unitPrice;
-	private Order orderId;
-	private Product productId;
+	private Long orderId;
+	private Long productId;
 }

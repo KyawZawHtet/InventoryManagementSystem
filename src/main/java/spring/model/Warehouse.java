@@ -20,5 +20,5 @@ public class Warehouse {
 	private LocalDate date;
 	private LocalDate expiredDate;
 	private String description;
-	private Location locationId;
+	private Long locationId;
 }

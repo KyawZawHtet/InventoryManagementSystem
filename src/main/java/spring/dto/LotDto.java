@@ -13,11 +13,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class LotDto {
 
+	private Long id;
 	private String lotNumber;
 	private int quantity;
 	private double price;
+	private String uom;
 	private LocalDate date;
 	private LocalDate expiredDate;
 	private Long productId;
-	private Long locationId;
 }

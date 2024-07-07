@@ -13,8 +13,8 @@ public class SupplierDto {
 
 	private Long id;
 	private String name;
+	private String contactName;
 	private String email;
 	private String phoneNumber;
-	private String addres;
-	private Long userId;
+	private String address;
 }

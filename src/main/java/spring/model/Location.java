@@ -13,5 +13,5 @@ public class Location {
 
 	private Long id;
 	private String name;
-	private String addres;
+	private String address;
 }

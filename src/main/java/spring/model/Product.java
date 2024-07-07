@@ -13,9 +13,5 @@ public class Product {
 
 	private Long id;
 	private String name;
-	private String productCode;
-	private String description;
-	private String unitOfmeasure;
-	private String deleted;
-	private Category categoryId;
+	private Long categoryId;
 }

@@ -17,6 +17,5 @@ public class OrderDto {
 	private LocalDate orderDate;
 	private double totalAmount;
 	private String status;
-	private Long supplierId;
 	private Long userId;
 }

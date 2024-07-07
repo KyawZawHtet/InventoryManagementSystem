@@ -17,6 +17,5 @@ public class Order {
 	private LocalDate orderDate;
 	private double totalAmount;
 	private String status;
-	private Supplier supplierId;
-	private User userId;
+	private Long userId;
 }

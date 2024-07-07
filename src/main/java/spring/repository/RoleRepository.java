@@ -2,9 +2,6 @@ package spring.repository;
 
 import org.springframework.stereotype.Repository;
 import spring.dto.RoleDto;
-import spring.dto.UserDto;
-import spring.model.Role;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +16,7 @@ public class RoleRepository {
         String insertQuery = "INSERT INTO role(role) VALUES (?)";
         try (var con = getConnection(); var ps = con.prepareStatement(insertQuery)) {
             ps.setString(1, roleDto.getRole());
+
             i = ps.executeUpdate();
         } catch(Exception e) {
             System.out.println("Insert UserRole : " + e.getMessage());

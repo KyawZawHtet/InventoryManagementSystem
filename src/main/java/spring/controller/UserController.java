@@ -40,9 +40,8 @@ public class UserController {
 	}
 
 	@PostMapping(value = "/doregistration")
-	public String doRegister(@ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
+	public String doRegister(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
 		if (bindingResult.hasErrors()) {
-			System.out.println("Fuck You Error! 1");
 			return "adduser";
 		}
 
@@ -50,23 +49,19 @@ public class UserController {
 			UserDto userDto = modelMapper.map(user, UserDto.class);
 			int i = userRepository.insert(userDto);
 			if (i > 0) {
-				System.out.println("Fuck You Error! 2");
 				return "redirect:/showusers";
 			} else {
-				model.addAttribute("user", new User());
-				System.out.println("Fuck You Error! 3");
-				return "adduser";
+				return "redirect:/adduser";
 			}
 		} else {
-			model.addAttribute("user", new User());
-			System.out.println("Fuck You Error! 4");
-			return "adduser";
+			model.addAttribute("user", user);
+			return "redirect:/adduser";
 		}
 
 	}
 
 	@GetMapping(value = "/user_update/{user_id}")
-	public String showUserUpdateForm(@PathVariable("user_id") int id, Model model) {
+	public String showUserUpdateForm(@PathVariable("user_id") Long id, Model model) {
 
 		UserDto dto = userRepository.showUserById(id);
 		User userBean = modelMapper.map(dto, User.class);
