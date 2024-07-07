@@ -449,7 +449,7 @@
                     <h6>View/Search product Category</h6>
                 </div>
                 <div class="page-btn">
-                    <a href="<c:url value="#"/> " class="btn btn-added">
+                    <a href="<c:url value="add"/> " class="btn btn-added">
                         <img
                                 src="<c:url value="/resources/assets/img/icons/plus.svg"/> "
                                 class="me-1"
@@ -564,7 +564,8 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                            	<c:forEach var="category" items="${categories }">
+                            		<tr>
                                 <td>
                                     <label class="checkboxs">
                                         <input type="checkbox"/>
@@ -578,19 +579,22 @@
                                                 alt="product"
                                         />
                                     </a>
-                                    <a href="javascript:void(0);">Computers</a>
+                                    <!-- <a href="javascript:void(0);">Computers</a> -->
+                                   	${category.name }
                                 </td>
-                                <td>Computers Description</td>
+                                <td>${category.description }</td>
                                 <td>Admin</td>
                                 <td>
-                                    <a class="me-3" href="<c:url value="#"/> ">
+                                    <a class="me-3" href="<c:url value="update/${category.id }"/> ">
                                         <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img"/>
                                     </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
+                                    <!-- <a class="me-3 confirm-text" href="javascript:void(0);">
                                         <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img"/>
                                     </a>
+                                     -->
                                 </td>
                             </tr>
+                            	</c:forEach>
                             </tbody>
                         </table>
                     </div>
