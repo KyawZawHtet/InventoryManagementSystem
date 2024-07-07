@@ -6,17 +6,18 @@ import java.sql.SQLException;
 
 public class ConnectionClass {
 
-	public static Connection getConnection() {
-		Connection connection = null;
+	public static Connection getConnection()
+	{
+		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory_management_system", "root",
-					"kyaw");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory_management_system", "root", "Thandar@2018#!");
 		} catch (ClassNotFoundException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Loading class: "+ e.getMessage());
 		} catch (SQLException e) {
-			System.out.println(e.getMessage());
+			System.out.println("Database Connection: "+ e.getMessage());
 		}
-		return connection;
+		
+		return con;
 	}
 }

@@ -1,6 +1,7 @@
 package spring.dto;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,10 +16,10 @@ public class LotDto {
 
 	private Long id;
 	private String lotNumber;
-	private int quantity;
+	private Date expiredDate;
 	private double price;
+	private Date date;
 	private String uom;
-	private LocalDate date;
-	private LocalDate expiredDate;
+	private int quantity;
 	private Long productId;
 }
