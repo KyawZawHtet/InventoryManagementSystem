@@ -18,18 +18,18 @@
     <link
             rel="shortcut icon"
             type="image/x-icon"
-            href="assets/img/favicon.jpg"
+            href="<c:url value="/resources/assets/img/favicon.jpg"/> "
     />
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.min.css"/> " />
 
     <link
             rel="stylesheet"
-            href="assets/plugins/fontawesome/css/fontawesome.min.css"
+            href="<c:url value="/resources/assets/plugins/fontawesome/css/fontawesome.min.css"/> "
     />
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/fontawesome/css/all.min.css"/> " />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/style.css"/> " />
 
 </head>
 
@@ -40,7 +40,7 @@
             <div class="login-content">
                 <div class="login-userset">
                     <div class="login-logo">
-                        <img src="assets/img/logo.png" alt="img" />
+                        <img src="<c:url value="/resources/assets/img/logo.png"/> " alt="img" />
                     </div>
                     <div class="login-userheading">
                         <h3>Create an Account</h3>
@@ -50,14 +50,14 @@
                         <label>Full Name</label>
                         <div class="form-addons">
                             <input type="text" placeholder="Enter your full name" />
-                            <img src="assets/img/icons/users1.svg" alt="img" />
+                            <img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" />
                         </div>
                     </div>
                     <div class="form-login">
                         <label>Email</label>
                         <div class="form-addons">
                             <input type="text" placeholder="Enter your email address" />
-                            <img src="assets/img/icons/mail.svg" alt="img" />
+                            <img src="<c:url value="/resources/assets/img/icons/mail.svg"/> " alt="img" />
                         </div>
                     </div>
                     <div class="form-login">
@@ -77,7 +77,7 @@
                     <div class="signinform text-center">
                         <h4>
                             Already a user?
-                            <a href="signin.html" class="hover-a">Sign In</a>
+                            <a href="<c:url value="#"/> " class="hover-a">Sign In</a>
                         </h4>
                     </div>
                     <div class="form-setlogin">
@@ -88,7 +88,7 @@
                             <li>
                                 <a href="javascript:void(0);">
                                     <img
-                                            src="assets/img/icons/google.png"
+                                            src="<c:url value="/resources/assets/img/icons/google.png"/> "
                                             class="me-2"
                                             alt="google"
                                     />
@@ -98,7 +98,7 @@
                             <li>
                                 <a href="javascript:void(0);">
                                     <img
-                                            src="assets/img/icons/facebook.png"
+                                            src="<c:url value="/resources/assets/img/icons/facebook.png"/> "
                                             class="me-2"
                                             alt="google"
                                     />
@@ -110,18 +110,18 @@
                 </div>
             </div>
             <div class="login-img">
-                <img src="assets/img/login.jpg" alt="img" />
+                <img src="<c:url value="/resources/assets/img/login.jpg"/> " alt="img" />
             </div>
         </div>
     </div>
 </div>
 
-<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="<c:url value="/resources/assets/js/jquery-3.6.0.min.js"/> "></script>
 
-<script src="assets/js/feather.min.js"></script>
+<script src="<c:url value="/resources/assets/js/feather.min.js"/> "></script>
 
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="<c:url value="/resources/assets/js/bootstrap.bundle.min.js"/> "></script>
 
-<script src="assets/js/script.js"></script>
+<script src="<c:url value="/resources/assets/js/script.js"/> "></script>
 </body>
 </html>
