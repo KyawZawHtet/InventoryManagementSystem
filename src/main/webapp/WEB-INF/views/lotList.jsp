@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<h2>List of Lots</h2>
 	<a href="${pageContext.request.contextPath}/lot/register">
         <button>Create New Lot</button>
@@ -16,26 +17,26 @@
     <table border="1">
         <tr>
             <th>ID</th>
+            <th>Product Name</th>
             <th>Lot No</th>
+            <th>Quantity</th>
+            <th>UOM</th>
+            <th>Date</th>
             <th>Expired Date</th>
             <th>Price</th>
-            <th>Date</th>
-            <th>UOM</th>
-            <th>Quantity</th>
-            <th>Product</th>
             <th>Actions</th>
         </tr>
         <c:forEach items="${lotList}" var="lot">
             <tr>
-                <td>${lot.p_id}</td>
+            	<td>${lot.id}</td>
                 <td>${lot.productName}</td>
-                <td>${lot.lotNo}</td>
+                <td>${lot.lotNumber}</td>
                 <td>${lot.quantity}</td>
                 <td>${lot.uom}</td>
                 <td>${lot.date}</td>
                 <td>${lot.expiredDate}</td>
                 <td>${lot.price}</td>
-                <td>${lot.locationName}</td>
+                
                 <td>
                     <a href="${pageContext.request.contextPath}/lot/editlot/${lot.id}">Edit</a> |
                     <a href="${pageContext.request.contextPath}/lot/deletelot/${lot.id}">Delete</a>

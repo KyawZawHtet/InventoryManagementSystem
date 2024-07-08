@@ -13,6 +13,14 @@
     <form:form modelAttribute="lot" method="post" action="${pageContext.request.contextPath}/lot/doregister">
         <table>
         	<tr>
+                <td>Product:</td>
+                <td>
+                    <form:select path="productId">
+                        <form:options items="${products}" itemValue="id" itemLabel="name"/>
+                    </form:select>
+                </td>
+            </tr>
+        	<tr>
                 <td>Expired Date:</td>
                 <td><form:input path="expiredDate" type="date"/></td>
             </tr>
@@ -37,21 +45,6 @@
                 <td>Quantity:</td>
                 <td><form:input path="quantity"/></td>
             </tr>
-            <tr>
-                <td>Product:</td>
-                <td>
-                    <form:select path="productId">
-                        <form:options items="${products}" itemValue="id" itemLabel="name"/>
-                    </form:select>
-                </td>
-            </tr>
-            
-           
-            
-            
-            
-            
-            
             
             <tr>
                 <td colspan="2"><input type="submit" value="Register"/></td>

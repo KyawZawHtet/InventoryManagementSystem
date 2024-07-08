@@ -16,17 +16,8 @@
         	<tr>
                 <td>Product:</td>
                 <td>
-                    <form:select path="p_id">
-                        <form:options items="${products}" itemValue="id" itemLabel="productName"/>
-                    </form:select>
-                </td>
-            </tr>
-            
-            <tr>
-                <td>Category:</td>
-                <td>
-                    <form:select path="categoryId">
-                        <form:options items="${categories}" itemValue="id" itemLabel="name"/>
+                    <form:select path="productId">
+                        <form:options items="${products}" itemValue="id" itemLabel="name"/>
                     </form:select>
                 </td>
             </tr>
@@ -55,14 +46,7 @@
                 <td>Price:</td>
                 <td><form:input path="price"/></td>
             </tr>
-            <tr>
-                <td>Location:</td>
-                <td>
-                    <form:select path="locationId">
-                        <form:options items="${locations}" itemValue="id" itemLabel="name"/>
-                    </form:select>
-                </td>
-            </tr>
+            
             <tr>
                 <td colspan="2"><input type="submit" value="Register"/></td>
             </tr>

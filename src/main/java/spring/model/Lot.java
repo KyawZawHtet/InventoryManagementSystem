@@ -1,6 +1,6 @@
 package spring.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,4 +18,5 @@ public class Lot {
 	private String uom;
 	private int quantity;
 	private Long productId;
+	private String productName;
 }

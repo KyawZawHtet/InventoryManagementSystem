@@ -10,6 +10,11 @@
                            http://www.springframework.org/schema/mvc 
                            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+	<bean id="locationRepository" class="spring.repository.LocationRepository"></bean>
+	<bean id="categoryRepository" class="spring.repository.CategoryRepository"></bean>
+	<bean id="lotRepository" class="spring.repository.LotRepository"></bean>
+	<bean id="productRepository" class="spring.repository.ProductRepository"></bean>
+	
 	<context:component-scan
 		base-package="spring.controller" />
 
