@@ -342,8 +342,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> " class="active">Add Product</a></li>
-                            <li><a href="<c:url value="#" /> ">Product List</a></li>
+                            <li><a href="<c:url value="add"/> " class="active">Add Product</a></li>
+                            <li><a href="<c:url value="lists" /> ">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -494,7 +494,7 @@
                         </div>
                         <div class="col-lg-12">
                             <input type="submit" class="btn btn-submit me-2" value="Submit"/>
-                            <a href="<c:url value="lists"/> " class="btn btn-cancel">Cancel</a>
+                            <a href="<c:url value="/"/> " class="btn btn-cancel">Cancel</a>
                         </div>
                     </div>
                 </div>

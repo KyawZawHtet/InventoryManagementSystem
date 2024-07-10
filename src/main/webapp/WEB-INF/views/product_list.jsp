@@ -342,8 +342,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Product</a></li>
-                            <li><a href="<c:url value="#" /> " class="active">Product List</a></li>
+                            <li><a href="<c:url value="add"/> ">Add Product</a></li>
+                            <li><a href="<c:url value="lists" /> " class="active">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -448,15 +448,7 @@
                     <h4>Product lists</h4>
                     <h6>View/Search product lists</h6>
                 </div>
-                <div class="page-btn">
-                    <a href="<c:url value="add"/> " class="btn btn-added">
-                        <img
-                                src="<c:url value="/resources/assets/img/icons/plus.svg"/> "
-                                class="me-1"
-                                alt="img"
-                        />Add Product
-                    </a>
-                </div>
+                
             </div>
 
             <div class="card">
@@ -551,12 +543,7 @@
                         <table class="table datanew">
                             <thead>
 	                            <tr>
-	                                <th>
-	                                    <label class="checkboxs">
-	                                        <input type="checkbox" id="select-all"/>
-	                                        <span class="checkmarks"></span>
-	                                    </label>
-	                                </th>
+	                               
 	                                <th>Product Code</th>
 									<th>Name</th>
 									<th>Description</th>
@@ -569,12 +556,7 @@
                             <tbody>
                             	<c:forEach var="product" items="${products }">
                             		<tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox"/>
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
+                                
                                 <td class="productimgname">
                                     <a href="javascript:void(0);" class="product-img">
                                         <img
