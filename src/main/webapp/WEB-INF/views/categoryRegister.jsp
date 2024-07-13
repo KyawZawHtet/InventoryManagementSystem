@@ -15,7 +15,7 @@
         <form:input path="name"/>
         <form:errors path="name" cssClass="error"/>
         <br/>
-        <form:label path="description">Name:</form:label>
+        <form:label path="description">Description:</form:label>
         <form:input path="description"/>
         <form:errors path="description" cssClass="error"/>
         <br/>
