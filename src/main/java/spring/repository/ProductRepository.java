@@ -16,6 +16,7 @@ public class ProductRepository {
 	public ProductRepository() {
 		super();
 		// TODO Auto-generated constructor stub
+		System.out.println("Hi");
 	}
 
 	public List<ProductDto> getAll() {
