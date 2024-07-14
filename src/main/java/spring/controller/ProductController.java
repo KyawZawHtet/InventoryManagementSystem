@@ -57,6 +57,7 @@ public class ProductController {
 	{
 		List<ProductDto> dbRs = productRepository.getAll();
 		model.addAttribute("products", dbRs);
+		System.out.println(dbRs);
 		return "product_list";
 	}
 	
