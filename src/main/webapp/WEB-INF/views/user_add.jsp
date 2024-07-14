@@ -463,8 +463,8 @@
                                 <div class="form-group">
                                     <form:label path="status">Status</form:label>
                                     <form:select path="status" class="select">
-                                        <form:option value="Active">Active</form:option>
-                                        <form:option value="Ban">Ban</form:option>
+                                        <form:option value="true">Active</form:option>
+                                        <form:option value="false">Ban</form:option>
                                     </form:select>
                                 </div>
                                 <div class="form-group">
