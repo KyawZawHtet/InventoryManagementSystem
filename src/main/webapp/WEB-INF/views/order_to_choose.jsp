@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html>
 <html>
@@ -294,8 +293,8 @@
             ></a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="<c:url value="#"/> ">My Profile</a>
-                <a class="dropdown-item" href="<c:url value="#"/>">Settings</a>
-                <a class="dropdown-item" href="<c:url value="#"/>">Logout</a>
+                <a class="dropdown-item" href="<c:url value="#"/> ">Settings</a>
+                <a class="dropdown-item" href="<c:url value="#"/> ">Logout</a>
             </div>
         </div>
     </div>
@@ -305,7 +304,7 @@
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="<c:url value="/"/>"
+                        <a href="<c:url value="/"/> "
                         ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img"/><span>
                     Dashboard</span
                         >
@@ -320,7 +319,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add User </a></li>
-                            <li><a href="<c:url value="#"/>">User List</a></li>
+                            <li><a href="<c:url value="#"/> ">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -343,8 +342,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Product</a></li>
-                            <li><a href="<c:url value="#"/> ">Product List</a></li>
+                            <li><a href="<c:url value="add"/> ">Add Product</a></li>
+                            <li><a href="<c:url value="lists" /> " class="active">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -355,10 +354,10 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
+                            <li><a href="<c:url value="#"/> ">Add Category</a></li>
                             <li>
-                                <a href="<c:url value="#"/> " class="active">Add Category</a>
+                                <a href="<c:url value="#"/> ">Category List</a>
                             </li>
-                            <li><a href="<c:url value="#"/> ">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -370,9 +369,9 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Order </a></li>
-                            <li><a href="<c:url value="#"/>">Order List</a></li>
-                            <li><a href="<c:url value="#"/>">Add Order Detail </a></li>
-                            <li><a href="<c:url value="#"/>">Order Detail List</a></li>
+                            <li><a href="<c:url value="#"/> ">Order List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Order Detail </a></li>
+                            <li><a href="<c:url value="#"/> ">Order Detail List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -384,7 +383,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
+                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -446,37 +445,153 @@
         <div class="content">
             <div class="page-header">
                 <div class="page-title">
-                    <h4>Product Add Category</h4>
-                    <h6>Create new product Category</h6>
+                    <h4>Product lists</h4>
+                    <h6>View/Search product lists</h6>
                 </div>
+                
             </div>
 
-            <form:form action="doadd" method="post" modelAttribute="category">
             <div class="card">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <form:label path="name">Category Name</form:label>
-                                <form:input type="text" path="name"/>
-                                <form:errors path="name" style="color:red"/>
+                    <div class="table-top">
+                        <div class="search-set">
+                            <div class="search-path">
+                                <a class="btn btn-filter" id="filter_search">
+                                    <img src="<c:url value="/resources/assets/img/icons/filter.svg"/> " alt="img"/>
+                                    <span
+                                    ><img src="<c:url value="/resources/assets/img/icons/closes.svg"/> " alt="img"
+                                    /></span>
+                                </a>
+                            </div>
+                            <div class="search-input">
+                                <a class="btn btn-searchset"
+                                ><img src="<c:url value="/resources/assets/img/icons/search-white.svg"/> " alt="img"
+                                /></a>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <form:label path="description">Description</form:label>
-                                <form:textarea class="form-control" path="description"></form:textarea>
-                                <form:errors path="description" style="color:red" />
+                        <div class="wordset">
+                            <ul>
+                                <li>
+                                    <a
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="pdf"
+                                    ><img src="<c:url value="/resources/assets/img/icons/pdf.svg"/> " alt="img"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="excel"
+                                    ><img src="<c:url value="/resources/assets/img/icons/excel.svg"/> " alt="img"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="print"
+                                    ><img src="<c:url value="/resources/assets/img/icons/printer.svg"/> " alt="img"
+                                    /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="filter_inputs">
+                        <div class="card-body pb-0">
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <select class="select">
+                                            <option>Choose Category</option>
+                                            <option>Computers</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <select class="select">
+                                            <option>Choose Sub Category</option>
+                                            <option>Fruits</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <select class="select">
+                                            <option>Choose Sub Brand</option>
+                                            <option>Iphone</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1 col-sm-6 col-12 ms-auto">
+                                    <div class="form-group">
+                                        <a class="btn btn-filters ms-auto"
+                                        ><img
+                                                src="<c:url value="/resources/assets/img/icons/search-whites.svg"/>"
+                                                alt="img"
+                                        /></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <input type="submit" class="btn btn-submit me-2" value="Submit"/>
-                            <a href="<c:url value="lists"/> " class="btn btn-cancel">Cancel</a>
-                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                    <form action="${pageContext.request.contextPath }/order/choose_order" method="post">
+                    <table class="table datanew">
+                            <thead>
+	                            <tr>
+	                               
+	                                <th>Product Code</th>
+									<th>Name</th>
+									<th>Total Quantity</th>
+									<th>UoM</th>
+									<th>Category</th>
+									<th>Status</th>
+	                            </tr>
+                            </thead>
+                            <tbody>
+                            	<c:forEach var="product" items="${products }">
+                            		<tr>
+                                
+                                <td class="productimgname">
+                                    <a href="javascript:void(0);" class="product-img">
+                                        <img
+                                                src="<c:url value="/resources/assets/img/product/noimage.png"/> "
+                                                alt="product"
+                                        />
+                                    </a>
+                                    <!-- <a href="javascript:void(0);">Computers</a> -->
+                                   	${product.code }
+                                </td>
+                                <td>${product.name }</td>
+                                <td>${total }</td>
+								<td>${product.uom }</td>
+								<td>${product.category }</td>
+                                <td>
+                                   <div class="form-check">
+									  <input class="form-check-input" type="checkbox" name="order_id" value="${product.id }" id="flexCheckDefault">
+									  <label class="form-check-label" for="flexCheckDefault">
+									    Add to Cart
+									  </label>
+								</div>
+                                </td>
+                            </tr>
+                            	</c:forEach>
+                            </tbody>
+                        </table>
+                         <div class="page-btn">
+                    <input type="submit" value="Create Order">
+                        
+                </div>
+                    </form>
+                        
                     </div>
                 </div>
             </div>
-            </form:form>
         </div>
     </div>
 </div>
