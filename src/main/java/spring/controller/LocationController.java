@@ -43,7 +43,6 @@ public class LocationController {
 	
 	@Autowired
 	private ModelMapper modelMapper;
-<<<<<<< HEAD
 
 	@RequestMapping(value = "/add_location", method = RequestMethod.GET)
 	public ModelAndView showRegister(Model model) {
@@ -104,7 +103,6 @@ public class LocationController {
 	public String deleteLocation(@PathVariable("id") Long id, Model model) {
 		return null;
 	}
-=======
 	
 	@GetMapping(value="/locationregister")
     public ModelAndView showRegisterForm() {
@@ -200,5 +198,4 @@ public class LocationController {
         int result = locationRepository.softDeleteLocation(id);
         return "redirect:/location/showlocations";
     }
->>>>>>> origin/ATD
 }

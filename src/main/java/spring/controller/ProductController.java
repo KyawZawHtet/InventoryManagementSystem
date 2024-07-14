@@ -1,6 +1,5 @@
 package spring.controller;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -47,11 +46,9 @@ import spring.repository.ProductRepository;
 @Controller
 @AllArgsConstructor
 @NoArgsConstructor
-<<<<<<< HEAD
-@RequestMapping("/product")
-=======
+
 @RequestMapping(value="/product")
->>>>>>> origin/ATD
+
 public class ProductController {
 
 	@Autowired
@@ -63,7 +60,6 @@ public class ProductController {
 	@Autowired
 	private ModelMapper modelMapper;
 	
-<<<<<<< HEAD
 	@GetMapping(value="/lists")
 	public String showProducts(ModelMap model)
 	{
@@ -165,7 +161,6 @@ public class ProductController {
 	{
 		return "no";
 	}
-=======
 	@GetMapping(value="/register")
   public ModelAndView showRegisterForm() {
       ModelAndView mav = new ModelAndView("productRegister");
@@ -260,5 +255,4 @@ public class ProductController {
       }
       
   }
->>>>>>> origin/ATD
 }
