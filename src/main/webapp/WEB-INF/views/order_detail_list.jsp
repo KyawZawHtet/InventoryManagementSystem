@@ -304,39 +304,39 @@
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="<c:url value="/"/> "
-                        ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img" /><span>
+                        <a href="<c:url value="/"/>"
+                        ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img"/><span>
                     Dashboard</span
                         >
                         </a>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     User</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add User </a></li>
-                            <li><a href="<c:url value="#"/> ">User List</a></li>
+                            <li><a href="<c:url value="#"/>">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Role</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Role </a></li>
-                            <li><a href="<c:url value="#"/> ">Role List</a></li>
+                            <li><a href="add_user_role">Add Role </a></li>
+                            <li><a href="show_user_roles">Role List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
                     Product</span
                         >
                             <span class="menu-arrow"></span
@@ -348,82 +348,47 @@
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
                     Category</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Category</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> " class="active">Category List</a>
-                            </li>
+                            <li><a href="category/categoryregister">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Order</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Order </a></li>
-                            <li>
-                                <a href="<c:url value="#"/>">Order List</a>
-                            </li>
+                            <li><a href="<c:url value="#"/> ">Add Order </a></li>
+                            <li><a href="<c:url value="#"/>">Order List</a></li>
                             <li><a href="<c:url value="#"/>">Add Order Detail </a></li>
-                            <li>
-                                <a href="<c:url value="#"/> " class="active"
-                                >Order Detail List</a
-                                >
-                            </li>
+                            <li><a href="<c:url value="#"/>"  class="active">Order Detail List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Lot</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Lot </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Lot </a></li>
                             <li><a href="<c:url value="#"/> ">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> ">Warehouse Product</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
                         ><img
                                 src="<c:url value="/resources/assets/img/icons/svg-gobbler.svg"/> "
-                                alt="img" /><span> Location</span>
+                                alt="img"/><span> Location</span>
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
@@ -433,7 +398,7 @@
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/settings.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/settings.svg"/> " alt="img"/><span>
                     Settings</span
                         >
                             <span class="menu-arrow"></span
@@ -564,35 +529,33 @@
                                     </label>
                                 </th>
                                 <th>Quantity</th>
-                                <th>Unit Price</th>
-                                <th>Order</th>
                                 <th>Product</th>
-                                <th>Created By</th>
+                                <th>Order</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" />
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>5</td>
-                                <td>50000</td>
-                                <td>Oder 1</td>
-                                <td>Product 1</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="<c:url value="#"/> ">
-                                        <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
-                                    </a>
-                                </td>
-                            </tr>
+                            <c:forEach var="orderDetail" items="${orderDetailDtoList}">
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" />
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>${orderDetail.quantity}</td>
+                                    <td>${orderDetail.productId}</td>
+                                    <td>${orderDetail.orderId}</td>
+                                    <td>
+                                        <a class="me-3" href="../orderdetail/editorderdetail/${orderDetail.id}">
+                                            <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
+                                        </a>
+                                        <a class="me-3 confirm-text" href="javascript:void(0);">
+                                            <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>

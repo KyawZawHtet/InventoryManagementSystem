@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@
     <link
             rel="shortcut icon"
             type="image/x-icon"
-            href="<c:url value="/resources/assets/img/favicon.jpg"/> "
+            href="<c:url value="/resources/assets/img/inventory.png"/> "
     />
 
     <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.min.css"/> " />
@@ -38,78 +39,81 @@
     <div class="account-content">
         <div class="login-wrapper">
             <div class="login-content">
-                <div class="login-userset">
-                    <div class="login-logo">
-                        <img src="<c:url value="/resources/assets/img/logo.png"/> " alt="img" />
-                    </div>
-                    <div class="login-userheading">
-                        <h3>Sign In</h3>
-                        <h4>Please login to your account</h4>
-                    </div>
-                    <div class="form-login">
-                        <label>Email</label>
-                        <div class="form-addons">
-                            <input type="text" placeholder="Enter your email address" />
-                            <img src="<c:url value="/resources/assets/img/icons/mail.svg"/> " alt="img" />
+                <form:form action="do_signin" modelAttribute="signin">
+                    <div class="login-userset">
+<%--                        <div class="login-logo">--%>
+<%--                            <img src="<c:url value="/resources/assets/img/logo.png"/> " alt="img" />--%>
+<%--                        </div>--%>
+                        <div class="login-userheading">
+                            <h3>Sign In</h3>
+                            <h4>Please login to your account</h4>
                         </div>
-                    </div>
-                    <div class="form-login">
-                        <label>Password</label>
-                        <div class="pass-group">
-                            <input
-                                    type="password"
-                                    class="pass-input"
-                                    placeholder="Enter your password"
-                            />
-                            <span class="fas toggle-password fa-eye-slash"></span>
+                        <div class="form-login">
+                            <form:label path="email">Email</form:label>
+                            <div class="form-addons">
+                                <form:input path="email" type="text" placeholder="Enter your email address" />
+                                <img src="<c:url value="/resources/assets/img/icons/mail.svg"/> " alt="img" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-login">
-                        <div class="alreadyuser">
+                        <div class="form-login">
+                            <form:label path="password">Password</form:label>
+                            <div class="pass-group">
+                                <form:input
+                                        path="password"
+                                        type="password"
+                                        class="pass-input"
+                                        placeholder="Enter your password"
+                                />
+                                <span class="fas toggle-password fa-eye-slash"></span>
+                            </div>
+                        </div>
+                        <div class="form-login">
+                            <div class="alreadyuser">
+                                <h4>
+                                    <a href="<c:url value="#"/> " class="hover-a"
+                                    >Forgot Password?</a
+                                    >
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="form-login">
+                            <input class="btn btn-login" type="submit" value="Sign In"/>
+                        </div>
+                        <div class="signinform text-center">
                             <h4>
-                                <a href="<c:url value="#"/> " class="hover-a"
-                                >Forgot Password?</a
-                                >
+                                Don’t have an account?
+                                <a href="<c:url value="#"/> " class="hover-a">Sign Up</a>
                             </h4>
                         </div>
+                        <div class="form-setlogin">
+                            <h4>Or sign up with</h4>
+                        </div>
+                        <div class="form-sociallink">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <img
+                                                src="<c:url value="/resources/assets/img/icons/google.png"/> "
+                                                class="me-2"
+                                                alt="google"
+                                        />
+                                        Sign Up using Google
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <img
+                                                src="<c:url value="/resources/assets/img/icons/facebook.png"/> "
+                                                class="me-2"
+                                                alt="google"
+                                        />
+                                        Sign Up using Facebook
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="form-login">
-                        <a class="btn btn-login" href="<c:url value="/"/> ">Sign In</a>
-                    </div>
-                    <div class="signinform text-center">
-                        <h4>
-                            Don’t have an account?
-                            <a href="<c:url value="#"/> " class="hover-a">Sign Up</a>
-                        </h4>
-                    </div>
-                    <div class="form-setlogin">
-                        <h4>Or sign up with</h4>
-                    </div>
-                    <div class="form-sociallink">
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0);">
-                                    <img
-                                            src="<c:url value="/resources/assets/img/icons/google.png"/> "
-                                            class="me-2"
-                                            alt="google"
-                                    />
-                                    Sign Up using Google
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">
-                                    <img
-                                            src="<c:url value="/resources/assets/img/icons/facebook.png"/> "
-                                            class="me-2"
-                                            alt="google"
-                                    />
-                                    Sign Up using Facebook
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </form:form>
             </div>
             <div class="login-img">
                 <img src="<c:url value="/resources/assets/img/login.jpg"/> " alt="img" />

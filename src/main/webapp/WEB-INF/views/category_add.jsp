@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html>
 <html>
@@ -330,8 +331,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Role </a></li>
-                            <li><a href="<c:url value="#"/> ">Role List</a></li>
+                            <li><a href="add_user_role">Add Role </a></li>
+                            <li><a href="show_user_roles">Role List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -354,10 +355,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li>
-                                <a href="<c:url value="#"/> " class="active">Add Category</a>
-                            </li>
-                            <li><a href="<c:url value="#"/> ">Category List</a></li>
+                            <li><a href="category/categoryregister" class="active">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -377,18 +376,6 @@
                     <li class="submenu">
                         <a href="javascript:void(0);"
                         ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Lot</span
                         >
                             <span class="menu-arrow"></span
@@ -396,21 +383,6 @@
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Lot </a></li>
                             <li><a href="<c:url value="#"/> ">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/> ">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> ">Warehouse Product</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -453,24 +425,27 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Category Name</label>
-                                <input type="text"/>
+                        <form:form modelAttribute="category" method="post" action="do_category">
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <form:label path="name">Category Name</form:label>
+                                    <form:input path="name" type="text"/>
+                                    <form:errors path="name" cssClass="error"/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea class="form-control"></textarea>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <form:label path="description">Description</form:label>
+                                    <form:textarea path="description" class="form-control"></form:textarea>
+                                    <form:errors path="description" cssClass="error"/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <a href="javascript:void(0);" class="btn btn-submit me-2"
-                            >Submit</a
-                            >
-                            <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
-                        </div>
+                            <div class="col-lg-12">
+                                <input href="javascript:void(0);" class="btn btn-submit me-2" type="submit" value="Add"
+                                />
+                                <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
+                            </div>
+                        </form:form>
                     </div>
                 </div>
             </div>

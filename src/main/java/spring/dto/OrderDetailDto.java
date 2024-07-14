@@ -13,7 +13,6 @@ public class OrderDetailDto {
 
 	private Long id;
 	private int quantity;
-	private double unitPrice;
-	private Long orderId;
 	private Long productId;
+	private Long orderId;
 }

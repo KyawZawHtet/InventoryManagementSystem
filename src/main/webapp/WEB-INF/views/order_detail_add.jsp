@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html>
 <html>
@@ -304,95 +305,77 @@
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="<c:url value="/"/> "
-                        ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img" /><span>
+                        <a href="<c:url value="/"/>"
+                        ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img"/><span>
                     Dashboard</span
                         >
                         </a>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     User</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add User </a></li>
-                            <li><a href="<c:url value="#"/> ">User List</a></li>
+                            <li><a href="<c:url value="#"/>">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Role</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Role </a></li>
-                            <li><a href="<c:url value="#"/> ">Role List</a></li>
+                            <li><a href="add_user_role">Add Role </a></li>
+                            <li><a href="show_user_roles">Role List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
                     Product</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Product</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Product</a></li>
                             <li><a href="<c:url value="#"/> ">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
                     Category</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li>
-                                <a href="<c:url value="#"/> ">Add Category</a>
-                            </li>
-                            <li><a href="<c:url value="#"/> ">Category List</a></li>
+                            <li><a href="category/categoryregister">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Order</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Order </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Order </a></li>
                             <li><a href="<c:url value="#"/>">Order List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/>" class="active"
-                                >Add Order Detail
-                                </a>
-                            </li>
-                            <li><a href="<c:url value="#"/> ">Order Detail List</a></li>
+                            <li><a href="<c:url value="#"/>"  class="active">Add Order Detail </a></li>
+                            <li><a href="<c:url value="#"/>">Order Detail List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Lot</span
                         >
                             <span class="menu-arrow"></span
@@ -404,24 +387,9 @@
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/> ">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> ">Warehouse Product</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
                         ><img
                                 src="<c:url value="/resources/assets/img/icons/svg-gobbler.svg"/> "
-                                alt="img" /><span> Location</span>
+                                alt="img"/><span> Location</span>
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
@@ -431,7 +399,7 @@
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/settings.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/settings.svg"/> " alt="img"/><span>
                     Settings</span
                         >
                             <span class="menu-arrow"></span
@@ -456,46 +424,42 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Quantity</label>
-                                <input type="text" />
+                    <form:form modelAttribute="orderDetail" method="post" action="do_orderdetail">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <form:label path="quantity">Quantity</form:label>
+                                    <form:input path="quantity" type="text" />
+                                    <form:errors path="quantity" cssClass="error"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <form:label path="productId">Product</form:label>
+                                    <form:select path="productId" class="select">
+                                        <form:options items="${products}" itemValue="id"
+                                                      itemLabel="name"></form:options>
+                                    </form:select>
+                                    <form:errors path="productId" cssClass="error"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <form:label path="orderId">Order</form:label>
+                                    <form:select path="orderId" class="select">
+                                        <form:options items="${orders}" itemValue="id"
+                                                      itemLabel="name"></form:options>
+                                    </form:select>
+                                    <form:errors path="orderId" cssClass="error"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <input href="javascript:void(0);" class="btn btn-submit me-2" type="submit" value="Add"
+                                />
+                                <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Unit Price</label>
-                                <input type="text" />
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Order</label>
-                                <select class="select">
-                                    <option>Select</option>
-                                    <option>Order 1</option>
-                                    <option>Order 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Product</label>
-                                <select class="select">
-                                    <option>Select</option>
-                                    <option>Product 1</option>
-                                    <option>Product 2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <a href="javascript:void(0);" class="btn btn-submit me-2"
-                            >Submit</a
-                            >
-                            <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
-                        </div>
-                    </div>
+                    </form:form>
                 </div>
             </div>
         </div>

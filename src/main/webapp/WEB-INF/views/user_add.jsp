@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html>
 <html>
@@ -330,8 +331,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Role </a></li>
-                            <li><a href="<c:url value="#"/>">Role List</a></li>
+                            <li><a href="#">Add Role </a></li>
+                            <li><a href="#">Role List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -342,8 +343,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Product</a></li>
-                            <li><a href="<c:url value="#"/>">Product List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Product</a></li>
+                            <li><a href="<c:url value="#"/> ">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -354,8 +355,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Category</a></li>
-                            <li><a href="<c:url value="#"/>">Category List</a></li>
+                            <li><a href="category/categoryregister">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -366,22 +367,10 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Order </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Order </a></li>
                             <li><a href="<c:url value="#"/>">Order List</a></li>
                             <li><a href="<c:url value="#"/>">Add Order Detail </a></li>
                             <li><a href="<c:url value="#"/>">Order Detail List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -392,23 +381,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Lot </a></li>
-                            <li><a href="<c:url value="#"/>">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/>">Warehouse Product</a>
-                            </li>
+                            <li><a href="<c:url value="#"/> ">Add Lot </a></li>
+                            <li><a href="<c:url value="#"/> ">Lot List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -419,8 +393,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Location </a></li>
-                            <li><a href="<c:url value="#"/>">Location List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Location </a></li>
+                            <li><a href="<c:url value="#"/> ">Location List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -431,13 +405,14 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">General Settings</a></li>
+                            <li><a href="<c:url value="#"/> ">General Settings</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header">
@@ -449,62 +424,67 @@
 
             <div class="card">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>User Name</label>
-                                <input type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <div class="pass-group">
-                                    <input type="password" class="pass-input"/>
-                                    <span class="fas toggle-password fa-eye-slash"></span>
+                    <form:form modelAttribute="user" method="post" action="do_user">
+                        <div class="row">
+                            <div class="col-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <form:label path="username">User Name</form:label>
+                                    <form:input path="username" type="text"/>
+                                    <form:errors path="username" cssClass="error"/>
+                                </div>
+                                <div class="form-group">
+                                    <form:label path="email">Email</form:label>
+                                    <form:input path="email" type="text"/>
+                                    <form:errors path="email" cssClass="error"/>
+                                </div>
+                                <div class="form-group">
+                                    <form:label path="password">Password</form:label>
+                                    <div class="pass-group">
+                                        <form:input path="password" type="password" class="pass-input"/>
+                                        <span class="fas toggle-password fa-eye-slash"></span>
+                                    </div>
+                                    <form:errors path="password" cssClass="error"/>
+                                </div>
+                                <div class="form-group">
+                                    <form:label path="confirmPassword">Confirm Password</form:label>
+                                    <div class="pass-group">
+                                        <form:input path="confirmPassword" type="password" class="pass-inputs"/>
+                                        <span class="fas toggle-passworda fa-eye-slash"></span>
+                                    </div>
+                                    <form:errors path="confirmPassword" cssClass="error"/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label>Confirm Password</label>
-                                <div class="pass-group">
-                                    <input type="password" class="pass-inputs"/>
-                                    <span class="fas toggle-passworda fa-eye-slash"></span>
+                            <div class="col-3 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <form:label path="phoneNumber">Phone Number</form:label>
+                                    <form:input path="phoneNumber" type="text"/>
+                                    <form:errors path="phoneNumber" cssClass="error"/>
+                                </div>
+                                <div class="form-group">
+                                    <form:label path="status">Status</form:label>
+                                    <form:select path="status" class="select">
+                                        <form:option value="Active">Active</form:option>
+                                        <form:option value="Ban">Ban</form:option>
+                                    </form:select>
+                                </div>
+                                <div class="form-group">
+                                    <form:label path="roleId">Role</form:label>
+                                    <form:select path="roleId" class="select">
+                                        <form:options items="${roles}" itemValue="id"
+                                                      itemLabel="roleName"></form:options>
+                                    </form:select>
+                                    <form:errors path="roleId" cssClass="error"/>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Role</label>
-                                <select class="select">
-                                    <option>Select</option>
-                                    <option>Role</option>
-                                    <option>Role1</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Status</label>
-                                <select class="select">
-                                    <option>Select</option>
-                                    <option>Active</option>
-                                    <option>Ban</option>
-                                </select>
+                            <div class="col-lg-12">
+                                <input href="javascript:void(0);" class="btn btn-submit me-2" type="submit" value="Add"
+                                />
+                                <a href="javascript:void(0);" class="btn btn-cancel"
+                                >Cancel</a
+                                >
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <a href="javascript:void(0);" class="btn btn-submit me-2"
-                            >Submit</a
-                            >
-                            <a href="javascript:void(0);" class="btn btn-cancel"
-                            >Cancel</a
-                            >
-                        </div>
-                    </div>
+                    </form:form>
                 </div>
             </div>
         </div>

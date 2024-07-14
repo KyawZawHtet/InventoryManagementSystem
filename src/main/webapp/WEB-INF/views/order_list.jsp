@@ -348,7 +348,7 @@
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg""/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/>" alt="img" /><span>
                     Category</span
                         >
                             <span class="menu-arrow"></span
@@ -379,18 +379,6 @@
                     <li class="submenu">
                         <a href="javascript:void(0);"
                         ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
                     Lot</span
                         >
                             <span class="menu-arrow"></span
@@ -398,21 +386,6 @@
                         <ul>
                             <li><a href="<c:url value="#"/>">Add Lot </a></li>
                             <li><a href="<c:url value="#"/> ">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> ">Warehouse Product</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -560,37 +533,33 @@
                                     </label>
                                 </th>
                                 <th>Order Date</th>
-                                <th>Total Amount</th>
                                 <th>Status</th>
-                                <th>Supplier</th>
-                                <th>User</th>
-                                <th>Created By</th>
+                                <th>Location</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" />
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>12/02/2024</td>
-                                <th>50000 MMK</th>
-                                <th>Ordered</th>
-                                <td>Supplier 1</td>
-                                <td>User 1</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="<c:url value="#"/> ">
-                                        <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
-                                    </a>
-                                </td>
-                            </tr>
+                            <c:forEach var="order" items="${orderDtoList}">
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" />
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>${order.orderDate}</td>
+                                    <th>Ordered</th>
+                                    <td>${order.locationId}</td>
+                                    <td>
+                                        <a class="me-3" href="../order/editorder/${order.id}">
+                                            <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
+                                        </a>
+                                        <a class="me-3 confirm-text" href="javascript:void(0);">
+                                            <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>

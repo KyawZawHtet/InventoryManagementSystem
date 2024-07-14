@@ -226,7 +226,7 @@
                         </a> <a class="dropdown-item" href="<c:url value="#"/> "><i
                             class="me-2" data-feather="settings"></i>Settings</a>
                         <hr class="m-0"/>
-                        <a class="dropdown-item logout pb-0" href="<c:url value="#"/> "><img
+                        <a class="dropdown-item logout pb-0" href="logout"><img
                                 src="<c:url value="/resources/assets/img/icons/log-out.svg"/> " class="me-2" alt="img"/>Logout</a>
                     </div>
                 </div>
@@ -249,15 +249,15 @@
         <div class="sidebar-inner slimscroll">
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
-                    <li class="active"><a href="<c:url value="/"/>"><img
+                    <li class="active"><a href="<c:url value="/dashboard"/>"><img
                             src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img"/><span>
 									Dashboard</span> </a></li>
                     <li class="submenu"><a href="javascript:void(0);"><img
                             src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
 									User</span> <span class="menu-arrow"></span></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add User </a></li>
-                            <li><a href="<c:url value="#"/>">User List</a></li>
+                            <li><a href="<c:url value="user/add_user"/> ">Add User </a></li>
+                            <li><a href="<c:url value="user/showusers"/>">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu"><a href="javascript:void(0);"><img
@@ -280,8 +280,8 @@
                             src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
 									Category</span> <span class="menu-arrow"></span></a>
                         <ul>
-                            <li><a href="<c:url value="#"/> ">Add Category</a></li>
-                            <li><a href="<c:url value="#"/> ">Category List</a></li>
+                            <li><a href="category/categoryregister">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu"><a href="javascript:void(0);"><img
@@ -295,29 +295,11 @@
                         </ul>
                     </li>
                     <li class="submenu"><a href="javascript:void(0);"><img
-                            src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-									Supplier</span> <span class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu"><a href="javascript:void(0);"><img
                             src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span> Lot</span>
                         <span class="menu-arrow"></span></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Lot </a></li>
                             <li><a href="<c:url value="#"/>">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu"><a href="javascript:void(0);"><img
-                            src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-									Warehouse</span> <span class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse List</a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse
-                                Product</a></li>
                         </ul>
                     </li>
                     <li class="submenu"><a href="javascript:void(0);"><img

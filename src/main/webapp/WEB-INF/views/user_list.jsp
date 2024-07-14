@@ -321,9 +321,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/>">Add User </a></li>
-                            <li>
-                                <a href="<c:url value="#"/>" class="active">User List</a>
-                            </li>
+                            <li><a href="<c:url value="#"/>" class="active">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -334,8 +332,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Role </a></li>
-                            <li><a href="<c:url value="#"/>">Role List</a></li>
+                            <li><a href="add_user_role">Add Role </a></li>
+                            <li><a href="show_user_roles">Role List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -346,8 +344,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Product</a></li>
-                            <li><a href="<c:url value="#"/>">Product List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Product</a></li>
+                            <li><a href="<c:url value="#"/> ">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -358,8 +356,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Category</a></li>
-                            <li><a href="<c:url value="#"/>">Category List</a></li>
+                            <li><a href="category/categoryregister">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -370,22 +368,10 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Order </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Order </a></li>
                             <li><a href="<c:url value="#"/>">Order List</a></li>
                             <li><a href="<c:url value="#"/>">Add Order Detail </a></li>
                             <li><a href="<c:url value="#"/>">Order Detail List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -396,23 +382,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Lot </a></li>
-                            <li><a href="<c:url value="#"/>">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/>">Warehouse Product</a>
-                            </li>
+                            <li><a href="<c:url value="#"/> ">Add Lot </a></li>
+                            <li><a href="<c:url value="#"/> ">Lot List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -423,8 +394,8 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Location </a></li>
-                            <li><a href="<c:url value="#"/>">Location List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Location </a></li>
+                            <li><a href="<c:url value="#"/> ">Location List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -435,7 +406,7 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">General Settings</a></li>
+                            <li><a href="<c:url value="#"/> ">General Settings</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -565,43 +536,38 @@
                                 </th>
                                 <th>User name</th>
                                 <th>Email</th>
+                                <th>Password</th>
                                 <th>Phone</th>
                                 <th>Role</th>
-                                <th>Created On</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox"/>
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>Thomas</td>
-                                <td>
-                                    <a
-                                            href="<c:url value="#"/>"
-                                            class="__cf_email__"
-                                            data-cfemail="fb8f9394969a88bb9e839a968b979ed5989496"
-                                    >[email&#160;protected]</a
-                                    >
-                                </td>
-                                <td>09986532147</td>
-                                <td>Admin</td>
-                                <td>3/15/2022</td>
-                                <td><span class="bg-lightgreen badges">Active</span></td>
-                                <td>
-                                    <a class="me-3" href="<c:url value="#"/>">
-                                        <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img"/>
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img"/>
-                                    </a>
-                                </td>
-                            </tr>
+                            <c:forEach var="user" items="${userDtoList}">
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox"/>
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>${user.username}</td>
+                                    <td>${user.email}</td>
+                                    <td>.......</td>
+                                    <td>${user.phoneNumber}</td>
+                                    <td>Admin</td>
+                                    <td><span class="bg-lightgreen badges">Active</span></td>
+                                    <td>
+                                        <a class="me-3" href="../user/edituser/${user.id}">
+                                            <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img"/>
+                                        </a>
+                                        <a class="me-3 confirm-text" href="javascript:void(0);">
+                                            <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img"/>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>

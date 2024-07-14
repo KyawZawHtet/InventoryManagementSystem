@@ -21,21 +21,21 @@
             href="<c:url value="/resources/assets/img/inventory.png"/> "
     />
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.min.css"/> " />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/bootstrap.min.css"/> "/>
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/animate.css"/> " />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/animate.css"/> "/>
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/select2/css/select2.min.css"/> " />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/select2/css/select2.min.css"/> "/>
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/dataTables.bootstrap4.min.css"/> " />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/dataTables.bootstrap4.min.css"/> "/>
 
     <link
             rel="stylesheet"
             href="<c:url value="/resources/assets/plugins/fontawesome/css/fontawesome.min.css"/> "
     />
-    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/fontawesome/css/all.min.css"/> " />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/plugins/fontawesome/css/all.min.css"/> "/>
 
-    <link rel="stylesheet" href="<c:url value="/resources/assets/css/style.css"/> " />
+    <link rel="stylesheet" href="<c:url value="/resources/assets/css/style.css"/> "/>
 
 </head>
 <body>
@@ -48,10 +48,10 @@
     <div class="header">
         <div class="header-left active">
             <a href="<c:url value="/"/> " class="logo">
-                <img src="<c:url value="/resources/assets/img/logo.png"/> " alt="" />
+                <img src="<c:url value="/resources/assets/img/logo.png"/> " alt=""/>
             </a>
             <a href="<c:url value="/"/> " class="logo-small">
-                <img src="<c:url value="/resources/assets/img/logo-small.png"/> " alt="" />
+                <img src="<c:url value="/resources/assets/img/logo-small.png"/> " alt=""/>
             </a>
             <a id="toggle_btn" href="javascript:void(0);"> </a>
         </div>
@@ -72,7 +72,7 @@
                     </a>
                     <form action="#">
                         <div class="searchinputs">
-                            <input type="text" placeholder="Search Here ..." />
+                            <input type="text" placeholder="Search Here ..."/>
                             <div class="search-addon">
                     <span
                     ><img src="<c:url value="/resources/assets/img/icons/closes.svg"/> " alt="img"
@@ -93,20 +93,20 @@
                         href="javascript:void(0);"
                         role="button"
                 >
-                    <img src="<c:url value="/resources/assets/img/flags/us1.png"/> " alt="" height="20" />
+                    <img src="<c:url value="/resources/assets/img/flags/us1.png"/> " alt="" height="20"/>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a href="javascript:void(0);" class="dropdown-item">
-                        <img src="<c:url value="/resources/assets/img/flags/us.png"/> " alt="" height="16" /> English
+                        <img src="<c:url value="/resources/assets/img/flags/us.png"/> " alt="" height="16"/> English
                     </a>
                     <a href="javascript:void(0);" class="dropdown-item">
-                        <img src="<c:url value="/resources/assets/img/flags/fr.png"/> " alt="" height="16" /> French
+                        <img src="<c:url value="/resources/assets/img/flags/fr.png"/> " alt="" height="16"/> French
                     </a>
                     <a href="javascript:void(0);" class="dropdown-item">
-                        <img src="<c:url value="/resources/assets/img/flags/es.png"/> " alt="" height="16" /> Spanish
+                        <img src="<c:url value="/resources/assets/img/flags/es.png"/> " alt="" height="16"/> Spanish
                     </a>
                     <a href="javascript:void(0);" class="dropdown-item">
-                        <img src="<c:url value="/resources/assets/img/flags/de.png"/> " alt="" height="16" /> German
+                        <img src="<c:url value="/resources/assets/img/flags/de.png"/> " alt="" height="16"/> German
                     </a>
                 </div>
             </li>
@@ -117,7 +117,7 @@
                         class="dropdown-toggle nav-link"
                         data-bs-toggle="dropdown"
                 >
-                    <img src="<c:url value="/resources/assets/img/icons/notification-bing.svg"/> " alt="img" />
+                    <img src="<c:url value="/resources/assets/img/icons/notification-bing.svg"/> " alt="img"/>
                     <span class="badge rounded-pill">4</span>
                 </a>
                 <div class="dropdown-menu notifications">
@@ -131,7 +131,7 @@
                                 <a href="<c:url value="#"/> ">
                                     <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-02.jpg"/> " />
+                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-02.jpg"/> "/>
                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details">
@@ -152,7 +152,7 @@
                                 <a href="<c:url value="#"/> ">
                                     <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-03.jpg"/> " />
+                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-03.jpg"/> "/>
                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details">
@@ -173,7 +173,7 @@
                                 <a href="<c:url value="#"/> ">
                                     <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-06.jpg"/> " />
+                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-06.jpg"/> "/>
                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details">
@@ -196,7 +196,7 @@
                                 <a href="<c:url value="#"/> ">
                                     <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-17.jpg"/> " />
+                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-17.jpg"/> "/>
                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details">
@@ -217,7 +217,7 @@
                                 <a href="<c:url value="#"/> ">
                                     <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-13.jpg"/> " />
+                          <img alt="" src="<c:url value="/resources/assets/img/profiles/avatar-13.jpg"/> "/>
                         </span>
                                         <div class="media-body flex-grow-1">
                                             <p class="noti-details">
@@ -247,7 +247,7 @@
                         data-bs-toggle="dropdown"
                 >
               <span class="user-img"
-              ><img src="<c:url value="/resources/assets/img/profiles/user.png"/> " alt="" />
+              ><img src="<c:url value="/resources/assets/img/profiles/user.png"/> " alt=""/>
                 <span class="status online"></span
                 ></span>
                 </a>
@@ -255,7 +255,7 @@
                     <div class="profilename">
                         <div class="profileset">
                   <span class="user-img"
-                  ><img src="<c:url value="/resources/assets/img/profiles/user.png"/> " alt="" />
+                  ><img src="<c:url value="/resources/assets/img/profiles/user.png"/> " alt=""/>
                     <span class="status online"></span
                     ></span>
                             <div class="profilesets">
@@ -263,14 +263,14 @@
                                 <h5>Admin</h5>
                             </div>
                         </div>
-                        <hr class="m-0" />
+                        <hr class="m-0"/>
                         <a class="dropdown-item" href="<c:url value="#"/>">
                             <i class="me-2" data-feather="user"></i> My Profile</a
                         >
                         <a class="dropdown-item" href="<c:url value="#"/>"
                         ><i class="me-2" data-feather="settings"></i>Settings</a
                         >
-                        <hr class="m-0" />
+                        <hr class="m-0"/>
                         <a class="dropdown-item logout pb-0" href="<c:url value="#"/>"
                         ><img
                                 src="<c:url value="/resources/assets/img/icons/log-out.svg"/> "
@@ -304,130 +304,101 @@
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="<c:url value="/"/> "
-                        ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img" /><span>
+                        <a href="<c:url value="/"/>"
+                        ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img"/><span>
                     Dashboard</span
                         >
                         </a>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     User</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add User </a></li>
-                            <li><a href="<c:url value="#"/> ">User List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add User </a></li>
+                            <li><a href="<c:url value="#"/>">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Role</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Role </a></li>
-                            <li><a href="<c:url value="#"/>">Role List</a></li>
+                            <li><a href="add_user_role">Add Role </a></li>
+                            <li><a href="show_user_roles">Role List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
                     Product</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/>">Add Product</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> " class="active">Product List</a>
-                            </li>
+                            <li><a href="<c:url value="#"/>" class="active">Product List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/product.svg"/> " alt="img"/><span>
                     Category</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Category</a></li>
-                            <li><a href="<c:url value="#"/> ">Category List</a></li>
+                            <li><a href="category/categoryregister">Add Category</a></li>
+                            <li><a href="category/showcategories">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Order</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Order </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Order </a></li>
                             <li><a href="<c:url value="#"/>">Order List</a></li>
                             <li><a href="<c:url value="#"/>">Add Order Detail </a></li>
-                            <li><a href="<c:url value="#"/> ">Order Detail List</a></li>
+                            <li><a href="<c:url value="#"/>">Order Detail List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img"/><span>
                     Lot</span
                         >
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Lot </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Lot </a></li>
                             <li><a href="<c:url value="#"/> ">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/>">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/>">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> ">Warehouse Product</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
                         ><img
                                 src="<c:url value="/resources/assets/img/icons/svg-gobbler.svg"/> "
-                                alt="img" /><span> Location</span>
+                                alt="img"/><span> Location</span>
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
-                            <li><a href="<c:url value="#"/>">Add Location </a></li>
+                            <li><a href="<c:url value="#"/> ">Add Location </a></li>
                             <li><a href="<c:url value="#"/> ">Location List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
                         <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/settings.svg"/> " alt="img" /><span>
+                        ><img src="<c:url value="/resources/assets/img/icons/settings.svg"/> " alt="img"/><span>
                     Settings</span
                         >
                             <span class="menu-arrow"></span
@@ -440,6 +411,7 @@
             </div>
         </div>
     </div>
+
     <div class="page-wrapper">
         <div class="content">
             <div class="page-header">
@@ -464,7 +436,7 @@
                         <div class="search-set">
                             <div class="search-path">
                                 <a class="btn btn-filter" id="filter_search">
-                                    <img src="<c:url value="/resources/assets/img/icons/filter.svg"/> " alt="img" />
+                                    <img src="<c:url value="/resources/assets/img/icons/filter.svg"/> " alt="img"/>
                                     <span
                                     ><img src="<c:url value="/resources/assets/img/icons/closes.svg"/> " alt="img"
                                     /></span>
@@ -574,47 +546,36 @@
                             <tr>
                                 <th>
                                     <label class="checkboxs">
-                                        <input type="checkbox" id="select-all" />
+                                        <input type="checkbox" id="select-all"/>
                                         <span class="checkmarks"></span>
                                     </label>
                                 </th>
                                 <th>Product Name</th>
-                                <th>Product Code</th>
-                                <th>UOM</th>
-                                <th>Description</th>
                                 <th>Category</th>
-                                <th>Created By</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" />
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);">Macbook pro</a>
-                                </td>
-                                <td>PT001</td>
-                                <td>12 Feets</td>
-                                <td>Product Description</td>
-                                <td>Computers</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="<c:url value="#"/>">
-                                        <img src="<c:url value="/resources/assets/img/icons/eye.svg"/> " alt="img" />
-                                    </a>
-                                    <a class="me-3" href="<c:url value="#"/> ">
-                                        <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
-                                    </a>
-                                    <a class="confirm-text" href="javascript:void(0);">
-                                        <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
-                                    </a>
-                                </td>
-                            </tr>
+                            <c:forEach var="product" items="${productDtoList}">
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox"/>
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>${product.name}</td>
+                                    <td>${product.categoryId}</td>
+                                    <td>
+                                        <a class="me-3" href="../product/editproduct/${product.id}">
+                                            <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img"/>
+                                        </a>
+                                        <a class="confirm-text" href="javascript:void(0);">
+                                            <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img"/>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>
