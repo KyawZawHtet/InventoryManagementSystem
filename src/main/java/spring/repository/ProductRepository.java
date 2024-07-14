@@ -6,9 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Repository;
-
 import spring.dto.ProductDto;
 import spring.utils.ConnectionClass;
 
@@ -127,4 +125,18 @@ public class ProductRepository {
 			System.out.println("Update one product : "+ e.getMessage());
 		}
 	}
+
+	public List<ProductDto> getToOrder(String[] ids) {
+		Connection con=ConnectionClass.getConnection();
+		List<ProductDto> products = new ArrayList<>();
+		for(String id: ids)
+		{
+			ProductDto product = getOne(id);
+			products.add(product);
+		}
+	
+		return products;
+	}
+	
+	
 }
