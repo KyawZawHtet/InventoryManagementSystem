@@ -293,8 +293,8 @@
             ></a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="<c:url value="#"/> ">My Profile</a>
-                <a class="dropdown-item" href="<c:url value="#"/>">Settings</a>
-                <a class="dropdown-item" href="<c:url value="#"/>">Logout</a>
+                <a class="dropdown-item" href="<c:url value="#"/> ">Settings</a>
+                <a class="dropdown-item" href="<c:url value="#"/> ">Logout</a>
             </div>
         </div>
     </div>
@@ -304,7 +304,7 @@
             <div id="sidebar-menu" class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="<c:url value="/"/>"
+                        <a href="<c:url value="/"/> "
                         ><img src="<c:url value="/resources/assets/img/icons/dashboard.svg"/> " alt="img"/><span>
                     Dashboard</span
                         >
@@ -319,7 +319,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add User </a></li>
-                            <li><a href="<c:url value="#"/>">User List</a></li>
+                            <li><a href="<c:url value="#"/> ">User List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -354,10 +354,10 @@
                             <span class="menu-arrow"></span
                             ></a>
                         <ul>
+                            <li><a href="<c:url value="#"/> ">Add Category</a></li>
                             <li>
-                                <a href="<c:url value="#"/> " class="active">Add Category</a>
+                                <a href="<c:url value="#"/> " class="active">Category List</a>
                             </li>
-                            <li><a href="<c:url value="#"/> ">Category List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -369,9 +369,9 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Order </a></li>
-                            <li><a href="<c:url value="#"/>">Order List</a></li>
-                            <li><a href="<c:url value="#"/>">Add Order Detail </a></li>
-                            <li><a href="<c:url value="#"/>">Order Detail List</a></li>
+                            <li><a href="<c:url value="#"/> ">Order List</a></li>
+                            <li><a href="<c:url value="#"/> ">Add Order Detail </a></li>
+                            <li><a href="<c:url value="#"/> ">Order Detail List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -383,7 +383,7 @@
                             ></a>
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/>">Supplier List</a></li>
+                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -441,41 +441,6 @@
         </div>
     </div>
 
-    <div class="page-wrapper">
-        <div class="content">
-            <div class="page-header">
-                <div class="page-title">
-                    <h4>Product Add Category</h4>
-                    <h6>Create new product Category</h6>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="form-group">
-                                <label>Category Name</label>
-                                <input type="text"/>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea class="form-control"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <a href="javascript:void(0);" class="btn btn-submit me-2"
-                            >Submit</a
-                            >
-                            <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script src="<c:url value="/resources/assets/js/jquery-3.6.0.min.js"/> "></script>

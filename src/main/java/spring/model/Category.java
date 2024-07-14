@@ -1,5 +1,7 @@
 package spring.model;
 
+import javax.validation.constraints.NotEmpty;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Category {
 
-	private Long id;
-	private String name;
-	private String description;
+	private String id;
+	@NotEmpty private String name;
+	@NotEmpty private String description;
 }
