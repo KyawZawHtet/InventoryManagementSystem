@@ -379,18 +379,6 @@
                     <li class="submenu">
                         <a href="javascript:void(0);"
                         ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Supplier</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Supplier </a></li>
-                            <li><a href="<c:url value="#"/> ">Supplier List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
                     Lot</span
                         >
                             <span class="menu-arrow"></span
@@ -398,21 +386,6 @@
                         <ul>
                             <li><a href="<c:url value="#"/> ">Add Lot </a></li>
                             <li><a href="<c:url value="#"/> " class="active">Lot List</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="javascript:void(0);"
-                        ><img src="<c:url value="/resources/assets/img/icons/users1.svg"/> " alt="img" /><span>
-                    Warehouse</span
-                        >
-                            <span class="menu-arrow"></span
-                            ></a>
-                        <ul>
-                            <li><a href="<c:url value="#"/> ">Add Warehouse </a></li>
-                            <li><a href="<c:url value="#"/> ">Warehouse List</a></li>
-                            <li>
-                                <a href="<c:url value="#"/> ">Warehouse Product</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="submenu">
@@ -562,39 +535,39 @@
                                 <th>Lot Number</th>
                                 <th>Quantity</th>
                                 <th>Price</th>
+                                <th>UOM</th>
                                 <th>Date</th>
                                 <th>Expired Date</th>
                                 <th>Product</th>
-                                <th>Location</th>
-                                <th>Created By</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>
-                                    <label class="checkboxs">
-                                        <input type="checkbox" />
-                                        <span class="checkmarks"></span>
-                                    </label>
-                                </td>
-                                <td>LT001</td>
-                                <td>5</td>
-                                <td>50000</td>
-                                <td>12/5/2024</td>
-                                <td>12/5/2025</td>
-                                <td>Product 1</td>
-                                <td>Location 1</td>
-                                <td>Admin</td>
-                                <td>
-                                    <a class="me-3" href="<c:url value="#"/> ">
-                                        <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
-                                    </a>
-                                    <a class="me-3 confirm-text" href="javascript:void(0);">
-                                        <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
-                                    </a>
-                                </td>
-                            </tr>
+                            <c:forEach var="lot" items="${lotList}">
+                                <tr>
+                                    <td>
+                                        <label class="checkboxs">
+                                            <input type="checkbox" />
+                                            <span class="checkmarks"></span>
+                                        </label>
+                                    </td>
+                                    <td>${lot.lotNumber}</td>
+                                    <td>${lot.quantity}</td>
+                                    <td>${lot.price}</td>
+                                    <td>${lot.uom}</td>
+                                    <td>${lot.date}</td>
+                                    <td>${lot.expiredDate}</td>
+                                    <td>${lot.productName}</td>
+                                    <td>
+                                        <a class="me-3" href="../lot/editlot/${lot.id}">
+                                            <img src="<c:url value="/resources/assets/img/icons/edit.svg"/> " alt="img" />
+                                        </a>
+                                        <a class="me-3 confirm-text" href="<c:url value="#"/> ">
+                                            <img src="<c:url value="/resources/assets/img/icons/delete.svg"/> " alt="img" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>

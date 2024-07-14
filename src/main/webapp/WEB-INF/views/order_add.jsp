@@ -445,8 +445,8 @@
 
     <div class="page-wrapper">
        <div class="table-responsive">
-                    <form action="${pageContext.request.contextPath }/order/" method="post">
-                    <table class="table">
+                    <form action="${pageContext.request.contextPath }/order/choose_order" method="post">
+                    <table class="table datanew">
                             <thead>
 	                            <tr>
 	                               
@@ -460,7 +460,7 @@
                             <tbody>
                             	<c:forEach var="product" items="${products }">
                             		<tr>
-                                <span></span>
+                                
                                 <td class="productimgname">
                                     <a href="javascript:void(0);" class="product-img">
                                         <img
@@ -485,8 +485,7 @@
                             	</c:forEach>
                             </tbody>
                         </table>
-                       	<button> Create Order</button>
-                       	<button>Cancel</button>
+                       
                     </form>
                         
                     </div>

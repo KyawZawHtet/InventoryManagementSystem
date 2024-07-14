@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <!DOCTYPE html>
 <html>
@@ -451,32 +450,30 @@
                 </div>
             </div>
 
-            <form:form action="doadd" method="post" modelAttribute="category">
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="form-group">
-                                <form:label path="name">Category Name</form:label>
-                                <form:input type="text" path="name"/>
-                                <form:errors path="name" style="color:red"/>
+                                <label>Category Name</label>
+                                <input type="text"/>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <form:label path="description">Description</form:label>
-                                <form:textarea class="form-control" path="description"></form:textarea>
-                                <form:errors path="description" style="color:red" />
+                                <label>Description</label>
+                                <textarea class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <input type="submit" class="btn btn-submit me-2" value="Submit"/>
-                            <a href="<c:url value="lists"/> " class="btn btn-cancel">Cancel</a>
+                            <a href="javascript:void(0);" class="btn btn-submit me-2"
+                            >Submit</a
+                            >
+                            <a href="<c:url value="#"/> " class="btn btn-cancel">Cancel</a>
                         </div>
                     </div>
                 </div>
             </div>
-            </form:form>
         </div>
     </div>
 </div>

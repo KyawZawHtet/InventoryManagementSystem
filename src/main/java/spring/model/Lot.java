@@ -1,11 +1,11 @@
 package spring.model;
 
-import java.time.LocalDate;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.sql.Date;
 
 @Getter
 @Setter
@@ -18,7 +18,8 @@ public class Lot {
 	private int quantity;
 	private double price;
 	private String uom;
-	private LocalDate date;
-	private LocalDate expiredDate;
+	private Date date;
+	private Date expiredDate;
 	private Long productId;
+	private String productName;
 }

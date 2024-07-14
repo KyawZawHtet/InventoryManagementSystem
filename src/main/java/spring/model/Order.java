@@ -1,7 +1,6 @@
 package spring.model;
 
-import java.time.LocalDate;
-
+import java.sql.Date;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,8 +13,7 @@ import lombok.Setter;
 public class Order {
 
 	private Long id;
-	private LocalDate orderDate;
-	private double totalAmount;
+	private Date orderDate;
 	private String status;
-	private Long userId;
+	private Long locationId;
 }

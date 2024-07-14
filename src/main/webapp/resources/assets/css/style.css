@@ -1843,6 +1843,7 @@ a:hover {
   }
 }
 .form-group input[type="text"],
+.form-group input[type="date"],
 .form-group input[type="password"] {
   border: 1px solid rgba(145, 158, 171, 0.32);
   height: 40px;
@@ -5884,7 +5885,7 @@ span.select2-container.select2-container--default.select2-container--open {
   font-weight: 700;
   background: #ff9f43;
   border-color: #ff9f43;
-  padding: 12px;
+  /*padding: 12px;*/
   -webkit-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -5934,7 +5935,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .login-wrapper .login-content .form-setlogin h4:after {
   content: "";
   background: #ccc;
-  width: 175px;
+  width: 130px;
   height: 1px;
   position: absolute;
   top: 10px;
@@ -5948,7 +5949,7 @@ span.select2-container.select2-container--default.select2-container--open {
 .login-wrapper .login-content .form-setlogin h4:before {
   content: "";
   background: #ccc;
-  width: 175px;
+  width: 130px;
   height: 1px;
   position: absolute;
   top: 10px;

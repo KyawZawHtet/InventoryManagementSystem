@@ -1,11 +1,13 @@
 package spring.dto;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Getter
 @Setter
@@ -18,7 +20,8 @@ public class LotDto {
 	private int quantity;
 	private double price;
 	private String uom;
-	private LocalDate date;
-	private LocalDate expiredDate;
+	private Date date;
+	private Date expiredDate;
 	private Long productId;
+	private String productName;
 }
