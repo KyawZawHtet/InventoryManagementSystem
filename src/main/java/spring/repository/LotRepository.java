@@ -1,15 +1,38 @@
 package spring.repository;
 
+<<<<<<< HEAD
 import org.springframework.stereotype.Repository;
 import spring.dto.LotDto;
 import spring.utils.ConnectionClass;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+=======
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-@Repository
+import spring.dto.LotDto;
+import spring.utils.ConnectionClass;
+>>>>>>> origin/ATD
+
 public class LotRepository {
+	public int insertLot(LotDto dto) {
+        int result = 0;
+        Connection con = ConnectionClass.getConnection();
+        try {
+            
+        	PreparedStatement checkPs = con.prepareStatement(
+                    "SELECT id, quantity FROM lot WHERE expired_date = ? AND price = ?"
+                );
+                checkPs.setDate(1, new java.sql.Date(dto.getExpiredDate().getTime()));
+                checkPs.setDouble(2, dto.getPrice());
+                ResultSet rs = checkPs.executeQuery();
 
+<<<<<<< HEAD
     public int insertLot(LotDto dto) {
         int result = 0;
         Connection con = ConnectionClass.getConnection();
@@ -35,12 +58,32 @@ public class LotRepository {
                 result = updatePs.executeUpdate();
             } else {
 
+=======
+                if (rs.next()) {
+                    
+                    long existingLotId = rs.getLong("id");
+                    double existingQuantity = rs.getInt("quantity");
+
+                    PreparedStatement updatePs = con.prepareStatement(
+                        "UPDATE lot SET quantity = ? WHERE id = ?"
+                    );
+                    updatePs.setDouble(1, existingQuantity + dto.getQuantity());
+                    updatePs.setLong(2, existingLotId);
+                    result = updatePs.executeUpdate();
+                } else {
+                
+>>>>>>> origin/ATD
                 String newlotId = generateLotId();
                 dto.setLotNumber(newlotId);
 
                 PreparedStatement insertPs = con.prepareStatement(
+<<<<<<< HEAD
                         "INSERT INTO lot (product_id, lot_no, expired_date, price, date, uom, quantity)" +
                                 "VALUES (?, ?, ?, ?, ?, ? ,?)"
+=======
+                    "INSERT INTO lot (product_id, lot_no, expired_date, price, date, uom, quantity)" +
+                    "VALUES (?, ?, ?, ?, ?, ? ,?)"
+>>>>>>> origin/ATD
                 );
                 insertPs.setLong(1, dto.getProductId());
                 insertPs.setString(2, dto.getLotNumber());
@@ -49,7 +92,11 @@ public class LotRepository {
                 insertPs.setDate(5, new java.sql.Date(dto.getDate().getTime()));
                 insertPs.setString(6, dto.getUom());
                 insertPs.setInt(7, dto.getQuantity());
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/ATD
 
                 result = insertPs.executeUpdate();
             }
@@ -58,6 +105,7 @@ public class LotRepository {
         }
         return result;
     }
+<<<<<<< HEAD
     public String generateLotId() {
         String newLotId = null;
         PreparedStatement ps = null;
@@ -93,6 +141,43 @@ public class LotRepository {
             PreparedStatement ps = con.prepareStatement(
                     "SELECT l.*, p.* FROM lot l " +
                             "INNER JOIN product p ON l.product_id = p.id "
+=======
+	public String generateLotId() {
+	    String newLotId = null;
+	    PreparedStatement ps = null;
+	    ResultSet rs = null;
+	    
+	    try {
+	    	Connection con = ConnectionClass.getConnection();
+	        ps = con.prepareStatement("SELECT lot_no FROM lot ORDER BY id DESC LIMIT 1");
+	        rs = ps.executeQuery();
+	        
+	        if (rs.next()) {
+	            String lastlotId = rs.getString("lot_no");
+	            if (lastlotId != null && lastlotId.startsWith("LOT")) {
+	                int num = Integer.parseInt(lastlotId.substring(3)) + 1;
+	                newLotId = String.format("LOT%03d", num);
+	            } else {
+	            	newLotId = "LOT001"; 
+	            }
+	        } else {
+	        	newLotId = "LOT001"; 
+	        }
+	    } catch (SQLException e) {
+	        System.out.println("lot No generation error: " + e.getMessage());
+	    }
+	    
+	    return newLotId;
+	}
+
+    public List<LotDto> getAllLots() {
+    	Connection con = ConnectionClass.getConnection();
+        List<LotDto> lists = new ArrayList<>();
+        try {
+            PreparedStatement ps = con.prepareStatement(
+                "SELECT l.*, p.* FROM lot l " +
+                "INNER JOIN product p ON l.product_id = p.id "
+>>>>>>> origin/ATD
             );
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -106,8 +191,13 @@ public class LotRepository {
                 dto.setDate(rs.getDate("date"));
                 dto.setUom(rs.getString("uom"));
                 dto.setQuantity(rs.getInt("quantity"));
+<<<<<<< HEAD
 
 
+=======
+                
+                
+>>>>>>> origin/ATD
                 lists.add(dto);
             }
         } catch (SQLException e) {
@@ -121,9 +211,15 @@ public class LotRepository {
         Connection con = ConnectionClass.getConnection();
         try {
             PreparedStatement ps = con.prepareStatement(
+<<<<<<< HEAD
                     "SELECT l.*, p.* FROM lot l " +
                             "INNER JOIN product p ON l.product_id = p.id "+
                             "WHERE l.id = ?"
+=======
+                "SELECT l.*, p.* FROM lot l " +
+                "INNER JOIN product p ON l.product_id = p.id "+ 
+                "WHERE l.id = ?"
+>>>>>>> origin/ATD
             );
             ps.setLong(1, id);
             ResultSet rs = ps.executeQuery();
@@ -131,14 +227,23 @@ public class LotRepository {
                 lotDTO = new LotDto();
                 lotDTO.setId(rs.getLong("id"));
                 lotDTO.setProductId(rs.getLong("product_id"));
+<<<<<<< HEAD
+=======
+                //lotDTO.setProductName(rs.getString("name"));
+>>>>>>> origin/ATD
                 lotDTO.setLotNumber(rs.getString("lot_no"));
                 lotDTO.setExpiredDate(rs.getDate("expired_date"));
                 lotDTO.setPrice(rs.getDouble("price"));
                 lotDTO.setDate(rs.getDate("date"));
                 lotDTO.setUom(rs.getString("uom"));
                 lotDTO.setQuantity(rs.getInt("quantity"));
+<<<<<<< HEAD
 
             }
+=======
+ 
+             }
+>>>>>>> origin/ATD
         } catch (SQLException e) {
             System.out.println("Get Lot By Id: " + e.getMessage());
         }
@@ -146,6 +251,7 @@ public class LotRepository {
     }
 
     public int updateLot(LotDto dto) {
+<<<<<<< HEAD
         Connection con = ConnectionClass.getConnection();
         int result = 0;
         try {
@@ -154,6 +260,17 @@ public class LotRepository {
                             "WHERE id = ?"
             );
 
+=======
+    	Connection con = ConnectionClass.getConnection();
+        int result = 0;
+        try {
+            PreparedStatement ps = con.prepareStatement(
+                "UPDATE lot SET product_id = ?, expired_date = ?,price = ?,date = ?,uom = ?,quantity = ?" +
+                "WHERE id = ?"
+            );
+            
+            //ps.setLong(1, dto.getId());
+>>>>>>> origin/ATD
             ps.setLong(1, dto.getProductId());
             ps.setDate(2, new java.sql.Date(dto.getExpiredDate().getTime()));
             ps.setDouble(3, dto.getPrice());
@@ -168,6 +285,12 @@ public class LotRepository {
         }
         return result;
     }
+<<<<<<< HEAD
+=======
+    
+
+
+>>>>>>> origin/ATD
 
     public int softDeleteLot(int id) {
         Connection con = ConnectionClass.getConnection();
