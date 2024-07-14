@@ -1,91 +1,104 @@
 package spring.repository;
 
 import org.springframework.stereotype.Repository;
+import spring.dto.CategoryDto;
 import spring.dto.RoleDto;
+import spring.model.Role;
+import spring.utils.ConnectionClass;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static spring.utils.ConnectionClass.getConnection;
 
+
 @Repository
 public class RoleRepository {
 
-    public int insert(RoleDto roleDto) {
-        int i = 0;
-        String insertQuery = "INSERT INTO role(role) VALUES (?)";
-        try (var con = getConnection(); var ps = con.prepareStatement(insertQuery)) {
-            ps.setString(1, roleDto.getRole());
+    public int insertRole(RoleDto roleDto) {
 
-            i = ps.executeUpdate();
-        } catch(Exception e) {
-            System.out.println("Insert UserRole : " + e.getMessage());
-            e.printStackTrace();
+        int i = 0;
+        Connection connection = getConnection();
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "INSERT INTO role(role_name) VALUES (?)");
+            preparedStatement.setString(1, roleDto.getRoleName());
+
+            i = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Role insert : " + e.getMessage());
         }
         return i;
     }
 
-    public int updateUserRoleById(RoleDto req) {
-        int i = 0;
-        String updateQuery  = "UPDATE role SET role = ? WHERE id = ?";
-        try(var con = getConnection(); var ps = con.prepareStatement(updateQuery)) {
-            ps.setString(1, req.getRole());
-            ps.setLong(2, req.getId());
-            i = ps.executeUpdate();
-        } catch(SQLException e) {
-            System.out.println("Update User Role By Id : " + e.getMessage());
-            e.printStackTrace();
-        }
-        return i;
-    }
+    public List<RoleDto> showAllRoles() {
+        List<RoleDto> roleList = new ArrayList<RoleDto>();
+        Connection connection = getConnection();
 
-    public RoleDto showUserRoleById(Long id) {
-        String selectQuery = "SELECT * FROM role WHERE id = ?";
-        RoleDto userRole = null;
-        try(var con = getConnection(); var ps = con.prepareStatement(selectQuery)) {
-            ps.setLong(1, id);
-            var rs = ps.executeQuery();
-            while(rs.next()) {
-                userRole = new RoleDto();
-                userRole.setId(rs.getLong("id"));
-                userRole.setRole(rs.getString("role"));
-            }
-        }catch(Exception e) {
-            System.out.println("Show User Role DTo By Id : " + e.getMessage());
-            e.printStackTrace();
-        }
-        return userRole;
-    }
-
-    public int deleteUseRoleById(Long id) {
-        int i = 0;
-
-        String deleteQuery = "DELETE FROM role WHERE id = ?";
-        try(var con = getConnection(); var ps = con.prepareStatement(deleteQuery)) {
-            ps.setLong(1, id);
-            i = ps.executeUpdate();
-        }catch(SQLException e) {
-            System.out.println("Delete User Role By Id : "+ e.getMessage());
-            e.printStackTrace();
-        }
-        return i;
-    }
-
-    public List<RoleDto> showAllUserRole() {
-        String selectQuery = "SELECT * FROM role";
-        List<RoleDto> roleDtoList = new ArrayList<>();
-        try(var con = getConnection(); var ps = con.prepareStatement(selectQuery)) {
-            var rs = ps.executeQuery();
-            while(rs.next()) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM role");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
                 RoleDto roleDto = new RoleDto();
-                roleDto.setId(rs.getLong("id"));
-                roleDto.setRole(rs.getString("role"));
-                roleDtoList.add(roleDto);
+                roleDto.setId(resultSet.getLong("id"));
+                roleDto.setRoleName(resultSet.getString("role_name"));
+                roleList.add(roleDto);
             }
-        }catch(Exception e) {
-            System.out.println("Show All User Role  : " + e.getMessage());
-            e.printStackTrace();
+
+        } catch (SQLException e) {
+            System.out.println("Role list : " + e.getMessage());
         }
-        return roleDtoList;
+
+        return roleList;
+    }
+
+    public RoleDto showRole(RoleDto dto) {
+
+        RoleDto roleDto = null;
+        Connection connection = getConnection();
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM role WHERE id = ?");
+            preparedStatement.setLong(1, dto.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                roleDto = new RoleDto();
+                roleDto.setId(resultSet.getLong("id"));
+                roleDto.setRoleName(resultSet.getString("role_name"));
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Select one role: " + e.getMessage());
+        }
+
+        return roleDto;
+    }
+
+    public int updateRole(RoleDto dto) {
+        int i = 0;
+        Connection connection = getConnection();
+        try {
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement("UPDATE role SET role_name=? WHERE id = ?");
+            preparedStatement.setString(1, dto.getRoleName());
+            preparedStatement.setLong(2, dto.getId());
+
+            i = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println("Update role :" + e.getMessage());
+        }
+
+        return i;
+    }
+
+    public int deleteRole(Long id) {
+        return 0;
     }
 }

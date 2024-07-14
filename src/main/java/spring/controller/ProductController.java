@@ -28,15 +28,6 @@ import spring.model.Product;
 import spring.repository.CategoryRepository;
 import spring.repository.ProductRepository;
 
-/*
- *  product/lists		->		show products 
- *  product/add			->		create product
- *  product/update/id	->		update product
- * 
- * */
-
-
-
 @Controller
 @AllArgsConstructor
 @NoArgsConstructor
@@ -124,15 +115,6 @@ public class ProductController {
 		return "redirect:../lists";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@ModelAttribute("categories")
 	public Map<String, String> getCategories()
 	{
@@ -156,7 +138,6 @@ public class ProductController {
 		uoms.add("Bottle");
 		return uoms;
 	}
-	
 	
 	@ModelAttribute("total")
 	public String totalQty()
