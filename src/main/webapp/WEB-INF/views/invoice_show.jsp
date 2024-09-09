@@ -2,7 +2,6 @@
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -540,53 +539,53 @@
                         </div>
                     </div>
 
+ 					<form action="${pageContext.request.contextPath }/order/doconfirm" method="post">
+ 					<input type="hidden" name="orderId" value="${orderId }" />
                     <div class="table-responsive">
-                        <table class="table datanew">
+                    <table class="table datanew">
                             <thead>
 	                            <tr>
-	                               
-	                                <th>Order ID</th>
-									<th>Customer Name</th>
-									<th>Amount</th>
-									<th>Order Date</th>
-									<th>Status</th>
-									<th>Invoice</th>
+	                            	<th>Order ID</th>
+	                            	<th>Customer</th>
+	                                <th>Product Lot</th>
+									<th>Name</th>
+									<th>Price</th>
+									<th>OrderQty</th>
+									<th>Expired</th>
+									<th>Quantity</th>
 	                            </tr>
                             </thead>
                             <tbody>
                             	<c:forEach var="order" items="${orders }">
                             		<tr>
+                            		<input type="hidden" value="${order.lot }" name="lot" />
                                 
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);" class="product-img">
-                                        <img
-                                                src="<c:url value="/resources/assets/img/product/noimage.png"/> "
-                                                alt="product"
-                                        />
-                                    </a>
-                                    <!-- <a href="javascript:void(0);">Computers</a> -->
-                                   	${order.id }
+                                <td class="productimgname"> 
+                                   	${order.order_id }
                                 </td>
+                                
                                 <td>${order.customer }</td>
-                                <td>${order.totalAmount }</td>
-                                <td>${order.orderDate }</td>
-								<td>${order.status }</td>
+                                <td>${order.lot }</td>
+                                
+                                <td>${order.product }</td>
+                                <td>${order.price }</td>
 								<td>
-									<c:choose>
-										<c:when test="${order.status=='true' }">
-											<a href="<c:url value="/order/details/${order.id }" />">Details</a>
-										</c:when>
-										<c:otherwise>
-											<a href="<c:url value="/order/invoice/${order.id }" />">Voucher</a>
-										</c:otherwise>
-									</c:choose>
+									<input type="number" min="0" max="${order.total_qty }" value="${order.order_qty }" name="orderQty"/>
 								</td>
-                               
+								<td>${order.expired }</td>
+                                <td>${order.total_qty }</td>
                             </tr>
                             	</c:forEach>
                             </tbody>
                         </table>
+                         <div class="page-btn">
+                    		<input type="submit" value="Confirm" class="btn btn-primary">
+                		</div>
+                		<div class="page-btn">
+                			<a href="" class="btn btn-primary">Cancel</a>
+                		</div>
                     </div>
+                     </form>
                 </div>
             </div>
         </div>

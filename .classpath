@@ -42,5 +42,16 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/thawzinaung/.m2/repository/com/itextpdf/layout/8.0.4/layout-8.0.4.jar" sourcepath="/home/thawzinaung/.m2/repository/com/itextpdf/layout/8.0.4/layout-8.0.4-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="layout-8.0.4.jar"/>
+			<attribute name="javadoc_location" value="jar:file:/home/thawzinaung/.m2/repository/com/itextpdf/layout/8.0.4/layout-8.0.4-javadoc.jar!/"/>
+			<attribute name="maven.groupId" value="com.itextpdf"/>
+			<attribute name="maven.artifactId" value="layout"/>
+			<attribute name="maven.version" value="8.0.4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

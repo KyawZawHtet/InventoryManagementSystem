@@ -1,5 +1,4 @@
-
-package spring.model;
+package spring.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,9 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Location {
+public class InvoiceDto {
 
-	private Long id;
-	private String name;
-	private String address;
+	private String id;
+	private String orderId;
+	private String lot;
+	private String qty;
+	
 }

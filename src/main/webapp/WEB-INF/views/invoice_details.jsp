@@ -2,7 +2,6 @@
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -446,147 +445,59 @@
         <div class="content">
             <div class="page-header">
                 <div class="page-title">
-                    <h4>Product lists</h4>
-                    <h6>View/Search product lists</h6>
+                    <p>Order ID : ${oid}</p>
+    				<p>Order Date : ${date }</p>
+			    	<p>Invoice No : ${invoice}</p>
+			    	<p>Company : ${customer}</p>
+			    	<p>Address : ${address}</p>
                 </div>
                 
             </div>
 
             <div class="card">
                 <div class="card-body">
-                    <div class="table-top">
-                        <div class="search-set">
-                            <div class="search-path">
-                                <a class="btn btn-filter" id="filter_search">
-                                    <img src="<c:url value="/resources/assets/img/icons/filter.svg"/> " alt="img"/>
-                                    <span
-                                    ><img src="<c:url value="/resources/assets/img/icons/closes.svg"/> " alt="img"
-                                    /></span>
-                                </a>
-                            </div>
-                            <div class="search-input">
-                                <a class="btn btn-searchset"
-                                ><img src="<c:url value="/resources/assets/img/icons/search-white.svg"/> " alt="img"
-                                /></a>
-                            </div>
-                        </div>
-                        <div class="wordset">
-                            <ul>
-                                <li>
-                                    <a
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="pdf"
-                                    ><img src="<c:url value="/resources/assets/img/icons/pdf.svg"/> " alt="img"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="excel"
-                                    ><img src="<c:url value="/resources/assets/img/icons/excel.svg"/> " alt="img"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="print"
-                                    ><img src="<c:url value="/resources/assets/img/icons/printer.svg"/> " alt="img"
-                                    /></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="card" id="filter_inputs">
-                        <div class="card-body pb-0">
-                            <div class="row">
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <select class="select">
-                                            <option>Choose Category</option>
-                                            <option>Computers</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <select class="select">
-                                            <option>Choose Sub Category</option>
-                                            <option>Fruits</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <select class="select">
-                                            <option>Choose Sub Brand</option>
-                                            <option>Iphone</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-1 col-sm-6 col-12 ms-auto">
-                                    <div class="form-group">
-                                        <a class="btn btn-filters ms-auto"
-                                        ><img
-                                                src="<c:url value="/resources/assets/img/icons/search-whites.svg"/>"
-                                                alt="img"
-                                        /></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+ 					<form action="${pageContext.request.contextPath }/order/doconfirm" method="post">
+ 					<input type="hidden" name="orderId" value="${orderId }" />
                     <div class="table-responsive">
-                        <table class="table datanew">
+                    <table class="table datanew">
                             <thead>
 	                            <tr>
-	                               
-	                                <th>Order ID</th>
-									<th>Customer Name</th>
-									<th>Amount</th>
-									<th>Order Date</th>
-									<th>Status</th>
-									<th>Invoice</th>
+	                                <th>Product</th>
+									<th>Description</th>
+									<th>Price</th>
+									<th>Qty</th>
+									<th>Expired</th>
+									<th>SubTotal</th>
 	                            </tr>
                             </thead>
                             <tbody>
-                            	<c:forEach var="order" items="${orders }">
+                            	<c:forEach var="detail" items="${details}">
                             		<tr>
-                                
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);" class="product-img">
-                                        <img
-                                                src="<c:url value="/resources/assets/img/product/noimage.png"/> "
-                                                alt="product"
-                                        />
-                                    </a>
-                                    <!-- <a href="javascript:void(0);">Computers</a> -->
-                                   	${order.id }
-                                </td>
-                                <td>${order.customer }</td>
-                                <td>${order.totalAmount }</td>
-                                <td>${order.orderDate }</td>
-								<td>${order.status }</td>
-								<td>
-									<c:choose>
-										<c:when test="${order.status=='true' }">
-											<a href="<c:url value="/order/details/${order.id }" />">Details</a>
-										</c:when>
-										<c:otherwise>
-											<a href="<c:url value="/order/invoice/${order.id }" />">Voucher</a>
-										</c:otherwise>
-									</c:choose>
-								</td>
-                               
-                            </tr>
+                            			<td>${detail.PName }</td>
+                            			<td>${detail.description }</td>
+                            			<td>${detail.price }</td>
+                            			<td>${detail.quantity }</td>
+                            			<td>${detail.expired }</td>
+                            			<td>${detail.price * detail.quantity }</td>
+                            		</tr>
                             	</c:forEach>
                             </tbody>
+                            <tfoot>
+                            	<tr class="table-active table-dark">
+                            		<td colspan="5" align="right"> Total </td>
+                            		<td>${total }</td>
+                            	</tr>
+                            </tfoot>
                         </table>
+                         <div class="page-btn">
+                    		<input type="submit" value="OK" class="btn btn-primary">
+                		</div>
+                		<div class="page-btn">
+                			<a href="${pageContext.request.contextPath }/order/invoice/pdf/${oid}" class="btn btn-primary" target="_blank">PDF</a>
+                		</div>
                     </div>
+                     </form>
                 </div>
             </div>
         </div>

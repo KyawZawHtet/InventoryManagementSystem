@@ -539,17 +539,17 @@
                         </div>
                     </div>
 
+ 					<form action="${pageContext.request.contextPath }/order/choose_order" method="post">
                     <div class="table-responsive">
-                    <form action="${pageContext.request.contextPath }/order/choose_order" method="post">
                     <table class="table datanew">
                             <thead>
 	                            <tr>
-	                               
-	                                <th>Product Code</th>
+	                                <th>Product Lot</th>
 									<th>Name</th>
-									<th>Total Quantity</th>
+									<th>Price</th>
+									<th>Quantity</th>
 									<th>UoM</th>
-									<th>Category</th>
+									<th>Expired</th>
 									<th>Status</th>
 	                            </tr>
                             </thead>
@@ -558,22 +558,17 @@
                             		<tr>
                                 
                                 <td class="productimgname">
-                                    <a href="javascript:void(0);" class="product-img">
-                                        <img
-                                                src="<c:url value="/resources/assets/img/product/noimage.png"/> "
-                                                alt="product"
-                                        />
-                                    </a>
-                                    <!-- <a href="javascript:void(0);">Computers</a> -->
-                                   	${product.code }
+                                   
+                                   	${product.lotNumber }
                                 </td>
-                                <td>${product.name }</td>
-                                <td>${total }</td>
+                                <td>${product.productName }</td>
+                                <td>${product.price }</td>
+                                <td>${product.quantity }</td>
 								<td>${product.uom }</td>
-								<td>${product.category }</td>
+								<td>${product.expiredDate }</td>
                                 <td>
                                    <div class="form-check">
-									  <input class="form-check-input" type="checkbox" name="order_id" value="${product.id }" id="flexCheckDefault">
+									  <input class="form-check-input" type="checkbox" name="order_id" value="${product.lotNumber }" id="flexCheckDefault">
 									  <label class="form-check-label" for="flexCheckDefault">
 									    Add to Cart
 									  </label>
@@ -584,12 +579,11 @@
                             </tbody>
                         </table>
                          <div class="page-btn">
-                    <input type="submit" value="Create Order">
+                    		<input type="submit" value="Create Order" class="btn btn-primary">
                         
-                </div>
-                    </form>
-                        
+                		</div>
                     </div>
+                     </form>
                 </div>
             </div>
         </div>

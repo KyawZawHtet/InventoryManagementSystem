@@ -445,13 +445,23 @@
 
     <div class="page-wrapper">
        <div class="table-responsive">
-                    <form action="${pageContext.request.contextPath }/order/" method="post">
+                    <form action="${pageContext.request.contextPath }/order/do_order" method="post">
+                    <div class="form-group col-md-6">
+                    	<label for="cust">Customer</label>
+                    	<select id="cust" name="customer">
+                    		<c:forEach var="customer" items="${customers }">
+                    			<option value="${customer.id }">${customer.name }</option>
+                    		</c:forEach>
+                    	</select>
+                    </div>
+                    
                     <table class="table">
                             <thead>
 	                            <tr>
-	                               
-	                                <th>Product Code</th>
+	                                <th>Product Lot</th>
 									<th>Name</th>
+									<th>Price</th>
+									<th>Expired</th>
 									<th>Quantity</th>
 									<th>UoM</th>
 									<th>Total Quantity</th>
@@ -459,8 +469,9 @@
                             </thead>
                             <tbody>
                             	<c:forEach var="product" items="${products }">
+                            	<input type="hidden" name="product" value="${product.lotNumber }"/>
+                            	<input type="hidden" name="price" value="${product.price }" />
                             		<tr>
-                                <span></span>
                                 <td class="productimgname">
                                     <a href="javascript:void(0);" class="product-img">
                                         <img
@@ -469,23 +480,25 @@
                                         />
                                     </a>
                                     <!-- <a href="javascript:void(0);">Computers</a> -->
-                                   	${product.code }
+                                   	${product.lotNumber }
                                 </td>
-                                <td>${product.name }</td>
+                                <td>${product.productName }</td>
+                                <td>${product.price }</td>
+                                <td>${product.expiredDate }</td>
                                 <td>
     								<span>
-    									<input type="number" placeholder="1" min="0">	
+    									<input type="number" value="1" min="0" name="order_qty" max="${product.quantity }">	
     								</span>
                                 </td>
 								<td>${product.uom }</td>
                                 <td>
-                                  
+                                  ${product.quantity }
                                 </td>
                             </tr>
                             	</c:forEach>
                             </tbody>
                         </table>
-                       	<button> Create Order</button>
+                       	<input type="submit" value="Create Order" />
                        	<button>Cancel</button>
                     </form>
                         
